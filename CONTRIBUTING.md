@@ -41,9 +41,10 @@ Thanks for your interest in contributing! This is my personal website, so the de
 Please follow these conventions to keep the repo clean:
 
 - `*.html` — one file per page, at the root
-- `main.css` — the **single** stylesheet for the whole site; no extra CSS files
-- `script.js` — the only JS file (tap support for the home boxes)
+- `css/main.css` — the **single** stylesheet for the whole site; no extra CSS files
+- `js/` — scripts (`script.js` tap support for the home boxes, `projects.js` + `projects-data.js` for the projects page)
 - `images/` — site assets (photos, badges, illustrations)
+- `images/projects/` — one image per project (referenced from `js/projects-data.js`)
 - `images/readme/` — screenshots used by the README
 
 A few CSS conventions used in `main.css`:

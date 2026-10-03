@@ -79,8 +79,10 @@ My "little digital world", a handmade personal website with HTML and CSS.
 ## Repository Structure
 
 - `*.html` one file per page
-- `main.css` the single stylesheet for the whole site
+- `css/main.css` the single stylesheet for the whole site
 - `images/` site assets (photos, badges, box illustrations)
+- `images/projects/` project images for the projects page
+- `js/` scripts
 - `images/readme/` screenshots used in this README
 
 ## Contributing
