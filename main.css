@@ -198,7 +198,7 @@ p.about {
   transition: background-position 1.1s ease, background-size 1.1s ease;
 }
 .box-4 .box-image {
-  background-image: url(images/perdican\ remove.png);
+  background-image: url(images/analog/perdican\ remove.png);
   background-size: 100%;
   background-position: center;
   background-repeat: no-repeat;
@@ -216,7 +216,7 @@ p.about {
   opacity: 1;
 }
 .box-3 .box-image {
-  background-image: url(images/picasso-removed.png);
+  background-image: url(images/analog/picasso-removed.png);
   background-size: 140%;
   background-position: center 40%;
   background-repeat: no-repeat;
