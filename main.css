@@ -658,7 +658,7 @@ footer {
 .multicolor-flower,
 .multicolor-flower2 {
   position: absolute;
-  width: 100px;
+  width: clamp(40px, 9vw, 100px);
   height: auto;
 }
 
@@ -668,17 +668,18 @@ footer {
 .home-page .multicolor-flower { top: 125px; left: 650px;}
 .home-page .multicolor-flower2 { top: 700px; left: 200px;}
 
-.projects-page .pink-flower { top: 10px; left: 10px;}
-.projects-page .blue-flower { top: 700px; right: 850px;}
-.projects-page .yellow-flower { top:60px; right: 100px;}
-.projects-page .multicolor-flower { top: 400px; left: 10px;}
-.projects-page .multicolor-flower2 { top: 400px; right: 10px;}
+.photo-page .pink-flower { top: 620px; right: 450px;}
+.photo-page .blue-flower { top: 30px; right: 200px;}
+.photo-page .yellow-flower { top: 60px; left: 10px;}
+.photo-page .multicolor-flower { top: 125px; left: 650px;}
+.photo-page .multicolor-flower2 { top: 700px; left: 200px;}
 
-.photo-page .pink-flower { top: 700px; right: 670px;}
-.photo-page .blue-flower { top: 70px; left: 150px;}
-.photo-page .yellow-flower { top:180px; right: 100px;}
-.photo-page .multicolor-flower { top: 400px; left: 10px;}
-.photo-page .multicolor-flower2 { top: 400px; right: 10px;}
+.projects-page .pink-flower { top: 620px; right: 450px;}
+.projects-page .blue-flower { top: 30px; right: 200px;}
+.projects-page .yellow-flower { top: 60px; left: 10px;}
+.projects-page .multicolor-flower { top: 125px; left: 650px;}
+.projects-page .multicolor-flower2 { top: 700px; left: 200px;}
+
 
 
 .flower {
@@ -686,6 +687,7 @@ footer {
   touch-action: none;
   user-select: none;
   z-index: 100;
+  will-change: transform;
 }
 
 .flower.dragging {
@@ -721,11 +723,5 @@ footer {
   .newsletter-form form {
     justify-content: center;
     flex-wrap: wrap;
-  }
-}
-
-@media screen and (max-width: 1024px) {
-  .flower {
-    display: none;
   }
 }
