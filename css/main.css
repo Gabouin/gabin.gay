@@ -442,11 +442,13 @@ a.box:active {
 .photo:nth-of-type(2n):hover {
   transform: rotate(-6deg);
 }*/
-.photo-title {
+.photo-title,
+.big-project-title {
   color: rgb(95, 95, 95);
   padding-top: 0.5em;
   grid-column: 1 / -1;
   text-align: center;
+  font-size: 2em;
 }
 .photo-description {
   color: rgb(95, 95, 95);
