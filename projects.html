@@ -1,8 +1,6 @@
 <!doctype html>
 <html lang="en">
   <head>
-    <link rel="stylesheet" href="main.css" />
-    <script src="script.js" defer></script>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta
@@ -14,23 +12,41 @@
       content="Hayo ! Here are displayed my projects ! Please go through the main page first !"
     />
     <title>Gabin - Projects</title>
+    <link rel="stylesheet" href="main.css" />
   </head>
   <body class="projects-page">
-    <div id="header">
-      <nav class="navbar">
-        <ul>
-          <li><a href="index.html">Gabin</a></li>
-          <li><a href="projects.html" class="active">Projects</a></li>
-          <li><a href="photos.html">Photos</a></li>
-          <li><a href="role.html">Experience</a></li>
-          <li><a href="blog.html">Blog</a></li>
-        </ul>
-      </nav>
-      <div class="btns">
-        <a href="https://github.com/gabouin" class="github-link" target="_blank" rel="noopener noreferrer">Github </a>
-        <a href="https://instagram.com/gabin.tvr_" class="instagram-link" target="_blank" rel="noopener noreferrer">Instagram </a>
+      <div id="header">
+        <nav class="navbar">
+          <ul>
+            <li><a href="index.html">Gabin</a></li>
+            <li><a href="projects.html" class="active">Projects</a></li>
+            <li><a href="photos.html">Photos</a></li>
+            <li><a href="role.html">Experience</a></li>
+            <li><a href="blog.html">Blog</a></li>
+          </ul>
+        </nav>
+        <div class="btns">
+          <a href="https://github.com/gabouin" class="github-link" target="_blank" rel="noopener noreferrer">Github </a>
+          <a href="https://instagram.com/gabin.tvr_" class="instagram-link" target="_blank" rel="noopener noreferrer">Instagram </a>
+        </div>
       </div>
-    </div>
+
+      <p class="big-project-title">Polished Projects</p>
+    <main class="projects-viewer">
+      <button class="nav-btn" id="prev" aria-label="Previous project">&#8592;</button>
+      <article class="project-card" id="project-card">
+        <img id="project-image" src="" alt="">
+        <div class="project-info">
+          <h2 id="project-title"></h2>
+          <p id="project-description"></p>
+          <a id="demo-link" href="#" target="_blank">Test it out!</a>
+          <a id="repo-link" href="#" target="_blank">Github repo</a>
+        </div>
+      </article>
+      <button class="nav-btn" id="next" aria-label="Next project">&#8594;</button>
+    </main>
+
+    <div id="dots" class="dots"></div>
 
     <img src="images/illustrations/blue-flower.png" alt="blue pastel flower" class="flower blue-flower" />
     <img src="images/illustrations/pink-flower.png" alt="pink pastel flower" class="flower pink-flower" />
@@ -38,7 +54,10 @@
     <img src="images/illustrations/multicolor flower 2.png" alt="multicolor pastel flower" class="flower multicolor-flower2" />
     <img src="images/illustrations/multicolor flower.png" alt="multicolor pastel flower" class="flower multicolor-flower" />
 
-    <p class="big-project-title">Polished Projects</p>
+
+    <script src="projects-data.js"></script>
+    <script src="projects.js"></script>
+    <script src="script.js"></script>
     <script src="https://pagering.gideon.sh/embed.js" defer></script>
     <footer class="pagering-footer">
       <pagering-link theme="light"></pagering-link>
