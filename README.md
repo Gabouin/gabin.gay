@@ -3,7 +3,7 @@
   <img width="275" height="142" alt="image" src="https://github.com/user-attachments/assets/7cebf597-f7a5-44a0-9f6a-aa207ea11022" />
 
   <br>
-  <a href="https://new.gabintavernier.com">NEW.GABINTAVERNIER.COM</a>
+  <a href="https://gabin.gay">gabin.gay</a>
   <br>
 </h1>
 
@@ -36,7 +36,7 @@ My "little digital world", a handmade personal website with HTML and CSS.
 
 ## About the Project
 
-**[new.gabintavernier.com](https://new.gabintavernier.com)** is my personal website, where I share my hardware projects, my analog photography and (soon) my blog/newsletter. Everything is written by hand: no framework, no build step, just HTML and CSS.
+**[Gabin.gay](https://gabin.gay)** is my personal website, where I share my hardware projects, my analog photography and (soon) my blog/newsletter. Everything is written by hand: no framework, no build step, just HTML and CSS.
 
 ### Features
 
