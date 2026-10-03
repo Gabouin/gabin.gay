@@ -643,7 +643,42 @@ footer {
   grid-template-rows: auto auto 1fr auto;
 }
 
-/* responsive blog — doit rester à la FIN du fichier pour gagner sur les règles au-dessus */
+.blue-flower {
+  position: absolute;
+  top: 50px;
+  right: 200px;
+  width: 100px;
+  height: auto;
+}
+
+.pink-flower {
+  position: absolute;
+  top: 620px;
+  right: 450px;
+  width: 100px;
+  height: auto;
+}
+
+.yellow-flower {
+  position: absolute;
+  top: 60px;
+  left: 10px;
+  width: 100px;
+  height: auto;
+}
+
+.flower {
+  cursor: grab;
+  touch-action: none;
+  user-select: none;
+  z-index: 100;
+}
+
+.flower.dragging {
+  cursor: grabbing;
+  z-index: 1000;
+}
+
 @media screen and (max-width: 1024px) {
   .articles {
     width: 90%;
