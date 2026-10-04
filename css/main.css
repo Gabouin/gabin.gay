@@ -864,4 +864,12 @@ footer {
   .project-info {
     padding: 20px;
   }
+
+  .nav-btn {
+    color: #222;
+  }
+
+  .nav-btn:hover {
+    transform: none;
+  }
 }
