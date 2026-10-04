@@ -1,7 +1,7 @@
 window.addEventListener('load', () => {
-  const MIN_SPEED = 10; 
-  const MAX_SPEED = 50;
-  const MAX_THROW = 9000; 
+  const MIN_SPEED = 2; 
+  const MAX_SPEED = 10;
+  const MAX_THROW = 5000; 
 
   const flowers = [...document.querySelectorAll('.flower')].map(el => {
     const r = el.getBoundingClientRect();
