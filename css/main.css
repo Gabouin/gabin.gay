@@ -845,4 +845,23 @@ footer {
     justify-content: center;
     flex-wrap: wrap;
   }
+
+  .projects-viewer {
+    flex-wrap: wrap;
+  }
+
+  .project-card {
+    flex-direction: column;
+    width: 100%;
+    order: -1;
+  }
+
+  .project-card img {
+    width: 100%;
+    height: 220px;
+  }
+
+  .project-info {
+    padding: 20px;
+  }
 }
