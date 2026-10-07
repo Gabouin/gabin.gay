@@ -25,22 +25,23 @@ function setLink(el, url) {
     }
 }
 
+function renderProject(p) {
+    img.src = p.image;
+    img.alt = p.title;
+    title.textContent = p.title;
+    desc.textContent = p.description;
+    setLink(demo, p.demo);
+    setLink(repo, p.repo);
+    dots.querySelectorAll('.dot').forEach((d, i) => {
+        d.classList.toggle('active', i === current);
+    });
+}
+
 function showProject(index) {
+    const direction = index - current;
     current = (index + projects.length) % projects.length;
     const p = projects[current];
-    card.classList.add('fading');
-    setTimeout(() => {
-        img.src = p.image;
-        img.alt = p.title;
-        title.textContent = p.title;
-        desc.textContent = p.description;
-        setLink(demo, p.demo);
-        setLink(repo, p.repo);
-        dots.querySelectorAll('.dot').forEach((d, i) => {
-            d.classList.toggle('active', i === current);
-        });
-        card.classList.remove('fading');
-    }, 300);
+    swapCard(() => renderProject(p), direction);
 }
 
 document.getElementById("prev").addEventListener('click', () => showProject(current - 1));
@@ -51,4 +52,4 @@ document.addEventListener('keydown', e => {
     if (e.key === 'ArrowRight') showProject(current +1);
 });
 
-showProject(0);
+renderProject(projects[current]);

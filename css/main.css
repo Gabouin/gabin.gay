@@ -725,12 +725,8 @@ footer {
   border-radius: 20px;
   box-shadow: 0 10px 30px rgba(0, 0, 0, 0.431);
   overflow: hidden;
-  transition: opacity 0.3s ease;
 }
 
-.project-card.fading {
-  opacity: 0;
-}
 
 .project-card img {
   width: 50%;
@@ -768,7 +764,7 @@ footer {
   border-radius: 12px;
   color: #222;
   font-weight: bold;
-  transition: transform 0.2s ease;
+  transition: transform 0.5s ease;
 }
 
 #demo-link {
@@ -802,7 +798,7 @@ footer {
   text-shadow: 0 5px 10px rgba(0, 0, 0, 0.3);
   font-size: 3em;
   cursor: pointer;
-  transition: transform 0.2s ease, background 0.2s ease;
+  transition: transform 0.5s ease, background 0.5s ease;
 }
 
 .nav-btn:hover {

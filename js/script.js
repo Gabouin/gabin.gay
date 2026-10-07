@@ -1,7 +1,7 @@
 window.addEventListener('load', () => {
-  const MIN_SPEED = 2; 
+  const MIN_SPEED = 2;
   const MAX_SPEED = 10;
-  const MAX_THROW = 5000; 
+  const MAX_THROW = 5000;
 
   const flowers = [...document.querySelectorAll('.flower')].map(el => {
     const r = el.getBoundingClientRect();
@@ -11,7 +11,6 @@ window.addEventListener('load', () => {
     el.style.top = '0';
     el.style.right = 'auto';
     el.draggable = false;
-
 
     const angle = Math.random() * Math.PI * 2;
     const speed = MIN_SPEED + Math.random() * (MAX_SPEED - MIN_SPEED);
@@ -25,7 +24,7 @@ window.addEventListener('load', () => {
       vx: Math.cos(angle) * speed,
       vy: Math.sin(angle) * speed,
       angle: 0,
-      spin: (Math.random() - 0.5) * 60, 
+      spin: (Math.random() - 0.5) * 60,
       dragging: false
     };
   });
@@ -49,7 +48,6 @@ window.addEventListener('load', () => {
 
         if (f.x < 0)       { f.x = 0;       f.vx =  Math.abs(f.vx); f.spin = -f.spin; }
         if (f.x + f.w > W) { f.x = W - f.w; f.vx = -Math.abs(f.vx); f.spin = -f.spin; }
-
         if (f.y < 0)       { f.y = 0;       f.vy =  Math.abs(f.vy); f.spin = -f.spin; }
         if (f.y + f.h > H) { f.y = H - f.h; f.vy = -Math.abs(f.vy); f.spin = -f.spin; }
 
@@ -95,7 +93,7 @@ window.addEventListener('load', () => {
         f.dragging = false;
         f.el.classList.remove('dragging');
 
-        let speed = Math.hypot(f.vx, f.vy);
+        const speed = Math.hypot(f.vx, f.vy);
         if (speed > MAX_THROW) {
           f.vx *= MAX_THROW / speed;
           f.vy *= MAX_THROW / speed;
@@ -107,10 +105,45 @@ window.addEventListener('load', () => {
 
         f.el.removeEventListener('pointermove', onMove);
         f.el.removeEventListener('pointerup', onUp);
+        f.el.removeEventListener('pointercancel', onUp);
       }
 
       f.el.addEventListener('pointermove', onMove);
       f.el.addEventListener('pointerup', onUp);
+      f.el.addEventListener('pointercancel', onUp);
     });
   }
 });
+
+let isCardAnimating = false;
+
+async function swapCard(renderNewContent, direction = 1) {
+  const cardEl = document.getElementById('project-card');
+  if (!cardEl || isCardAnimating) return;
+  isCardAnimating = true;
+
+  const d = direction < 0 ? -1 : 1;
+
+  await cardEl.animate([
+    { opacity: 1, transform: 'translateX(0) scale(1)', filter: 'blur(0px)' },
+    { opacity: 0, transform: `translateX(${-30 * d}px) scale(0.98)`, filter: 'blur(4px)' }
+  ], {
+    duration: 300,
+    easing: 'cubic-bezier(0.4, 0, 1, 1)',
+    fill: 'forwards'
+  }).finished;
+
+  renderNewContent(cardEl);
+
+  await cardEl.animate([
+    { opacity: 0, transform: `translateX(${30 * d}px) scale(0.98)`, filter: 'blur(4px)' },
+    { opacity: 1, transform: 'translateX(0) scale(1)', filter: 'blur(0px)' }
+  ], {
+    duration: 650,
+    easing: 'cubic-bezier(0.22, 1, 0.36, 1)',
+    fill: 'forwards'
+  }).finished;
+
+  cardEl.getAnimations().forEach(a => a.cancel());
+  isCardAnimating = false;
+}
