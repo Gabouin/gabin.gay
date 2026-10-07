@@ -721,9 +721,9 @@ footer {
   min-height: 450px;
   display: flex;
   background: white;
-  border: 4px solid black;
-  border-radius: 15px;
-  box-shadow: 0 10px 30px rgba(0, 0, O, O.8);
+  border: 8px solid black;
+  border-radius: 20px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.431);
   overflow: hidden;
   transition: opacity 0.3s ease;
 }
@@ -799,6 +799,7 @@ footer {
   border-radius: 20%;
   border: 5px solid rgb(255, 255, 255);
   background: white;
+  text-shadow: 0 5px 10px rgba(0, 0, 0, 0.3);
   font-size: 3em;
   cursor: pointer;
   transition: transform 0.2s ease, background 0.2s ease;

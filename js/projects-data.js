@@ -8,9 +8,9 @@ const projects = [
   },
   {
     title: "Pixl YSWS",
-    description: "A sleek and modern wireless keyboard with customizable keys and RGB lighting",
-    image: "images/projects/pixl-ysws-renders-animate2-2-4-2.gif",
-    demo: "https://www.youtube.com/watch?v=C2K3zAZ9T1s",
-    repo: "https://github.com/gabouin/pixl-ysws",
+    description: "A Hack Club-sponsored program for teens to create projects and earn prizes while playing this 2D multiplayer game. ",
+    image: "images/projects/pixl.png",
+    demo: "https://pixl.hackclub.com/",
+    repo: "https://github.com/hackclub/pixl",
   }
 ];
