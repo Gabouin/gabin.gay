@@ -750,9 +750,20 @@ footer {
 }
 
 #project-description {
-  margin: 0;
+  margin-top: 5%;
   line-height: 1.6;
   color: #444;
+}
+
+.project-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 1rem;
+}
+
+#page-link {
+  white-space: nowrap;
 }
 
 #demo-link,
@@ -765,21 +776,31 @@ footer {
   color: #222;
   font-weight: bold;
   transition: transform 0.5s ease;
+  margin-top: -15%;
+}
+
+#page-link {
+
 }
 
 #demo-link {
-  margin-top: auto;
-  background-color: rgba(205, 255, 220, 0.8);
+  background-color: rgb(255, 249, 194);
 }
 
 #repo-link {
-  background: rgba(185, 233, 255, 0.8);
+  background: rgb(203, 239, 255);
 }
 
-#demo-link:hover,
+#demo-link:hover {
+  transform: translateY(-3px);
+  background: rgb(245, 239, 186)
+}
 #repo-link:hover {
   transform: translateY(-3px);
+  background: rgb(193, 228, 242)
 }
+
+
 
 .projects-links {
   margin-top: auto;
