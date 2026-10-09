@@ -764,6 +764,18 @@ footer {
 
 #page-link {
   white-space: nowrap;
+  text-decoration: underline;
+  text-decoration-thickness: 2px;
+  text-decoration-color: rgb(95, 95, 95);
+  color: rgb(95, 95, 95);
+  text-underline-offset: 2px;
+}
+
+#page-link:hover {
+  text-decoration: underline wavy;
+  text-decoration-color: rgb(137, 216, 252);
+  text-decoration-thickness: 2px;
+  text-underline-offset: 3px;
 }
 
 #demo-link,
@@ -779,9 +791,6 @@ footer {
   margin-top: -15%;
 }
 
-#page-link {
-
-}
 
 #demo-link {
   background-color: rgb(255, 249, 194);

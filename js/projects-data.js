@@ -5,6 +5,7 @@ const projects = [
     image: "images/projects/perdican-renders-animate2-2-4-2.gif",
     demo: "https://www.youtube.com/watch?v=C2K3zAZ9T1s",
     repo: "https://github.com/gabouin/perdican",
+    page: "projects-pages/perdican.html",
   },
   {
     title: "Pixl YSWS",
@@ -12,5 +13,7 @@ const projects = [
     image: "images/projects/pixl.png",
     demo: "https://pixl.hackclub.com/",
     repo: "https://github.com/hackclub/pixl",
+    page: "projects-pages/pixl.html",
+
   }
 ];

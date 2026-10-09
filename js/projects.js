@@ -6,6 +6,7 @@ const title = document.getElementById("project-title");
 const desc = document.getElementById("project-description");
 const demo = document.getElementById("demo-link");
 const repo = document.getElementById("repo-link");
+const page = document.getElementById("page-link");
 const dots = document.getElementById("dots");
 
 projects.forEach((p, i) => {
@@ -32,6 +33,7 @@ function renderProject(p) {
     desc.textContent = p.description;
     setLink(demo, p.demo);
     setLink(repo, p.repo);
+    setLink(page, p.page);
     dots.querySelectorAll('.dot').forEach((d, i) => {
         d.classList.toggle('active', i === current);
     });
