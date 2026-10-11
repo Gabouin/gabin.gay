@@ -919,6 +919,15 @@ footer {
   color: #77b3cc
 }
 
+body.images-hidden .flower {
+  opacity: 0;
+  pointer-events: none;
+}
+
+.flower {
+  transition: opacity 0.6s ease;
+}
+
 @keyframes bounce {
   0%, 100% { translate: 0 0; }
   50%      { translate: 0 6px; }

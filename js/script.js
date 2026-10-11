@@ -187,3 +187,10 @@ fetch(`https://api.github.com/repos/${REPO}/commits?per_page=1`)
   .catch(() => {
     document.getElementById("commit-info").textContent = "";
   });
+
+const toggle = document.getElementById("ImgToggle");
+
+toggle.addEventListener("click", () => {
+  const hidden = document.body.classList.toggle("images-hidden");
+  toggle.textContent = hidden ? "Show flowers" : "Hide flowers";
+});
