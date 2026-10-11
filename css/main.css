@@ -809,7 +809,6 @@ footer {
 }
 
 
-
 .projects-links {
   margin-top: auto;
   display: flex;
@@ -839,7 +838,15 @@ footer {
   display: flex;
   justify-content: center;
   gap: 3px;
-  margin-top: 0px;
+  margin-top: -40px;
+  margin-bottom: 30px;
+}
+
+.scroll {
+  grid-column: 1 / -1;
+  font-size: 1.2em;
+  text-align: center;
+
 }
 
 @media screen and (max-width: 1024px) {
@@ -909,10 +916,12 @@ footer {
 @media screen and (max-width: 600px) {
   .project-card {
     min-height: 0;
+    max-height: 600;
+    max-width: 500;
   }
 
   .project-card img {
-    height: 150px;
+    height: 200px;
   }
 
   .project-info {
