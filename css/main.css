@@ -188,10 +188,10 @@ p.about {
   position: relative;
   overflow: hidden;
 }
-.box-1 { border: 4px solid rgba(255, 200, 0, 0.32); }
-.box-2 { border: 4px solid rgba(185, 233, 255, 0.539); }
-.box-3 { border: 4px solid rgba(232, 203, 251, 0.476); }
-.box-4 { border: 4px solid rgba(196, 255, 214, 0.598); }
+.box-1 { border: 4px solid rgb(255, 243, 198); }
+.box-2 { border: 4px solid rgb(220, 244, 255); }
+.box-3 { border: 4px solid rgb(252, 228, 236); }
+.box-4 { border: 4px solid rgb(232, 255, 239); }
 .box-image {
   position: absolute;
   inset: 0;
@@ -897,5 +897,53 @@ footer {
 
   .nav-btn:hover {
     transform: none;
+  }
+}
+
+#hackatime {
+  margin: 0;
+  font-size: 0.9em;
+  color: #666;
+}
+
+@media screen and (max-width: 600px) {
+  .project-card {
+    min-height: 0;
+  }
+
+  .project-card img {
+    height: 150px;
+  }
+
+  .project-info {
+    padding: 15px;
+    gap: 10px;
+  }
+
+  #project-title {
+    font-size: 1.5em;
+  }
+
+  #project-description {
+    margin-top: 0;
+    font-size: 0.9em;
+    line-height: 1.45;
+  }
+
+  #demo-link,
+  #repo-link {
+    margin-top: 0;
+    padding: 8px 14px;
+    font-size: 0.9em;
+  }
+
+  .projects-links {
+    margin-top: 5px;
+  }
+
+  .nav-btn {
+    width: 50px;
+    height: 45px;
+    font-size: 2em;
   }
 }
