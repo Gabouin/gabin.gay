@@ -721,7 +721,6 @@ footer {
   min-height: 450px;
   display: flex;
   background: white;
-  border: 8px solid black;
   border-radius: 20px;
   box-shadow: 0 10px 30px rgba(0, 0, 0, 0.431);
   overflow: hidden;

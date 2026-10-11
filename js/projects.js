@@ -67,14 +67,21 @@ document.addEventListener('keydown', e => {
 
 const HACKATIME_USER = "U0A2SJ7B739";
 
-async function loadHackatime(name) {
-    const url =
-`https://hackatime.hackclub.com/api/v1/users/${HACKATIME_USER}/stats`
-         + `?features=projects&filter_by_project=${encodeURIComponent(name)}`;
+async function fetchSeconds(name) {
+    const url = `https://hackatime.hackclub.com/api/v1/users/${HACKATIME_USER}/stats`
+        + `?features=projects&filter_by_project=${encodeURIComponent(name)}`;
     const res = await fetch(url);
     if (!res.ok) throw new Error(res.status);
     const json = await res.json();
-    return json.data.human_readable_total.replace(/\s*\d+s$/, "");
+    return json.data.total_seconds;
+}
+
+async function loadHackatime(names) {
+    const results = await Promise.all(names.map(fetchSeconds));
+    const s = results.reduce((a, b) => a + b, 0);
+    const h = Math.floor(s / 3600);
+    const m = Math.floor((s % 3600) / 60);
+    return `${h}h ${m}m`;
 }
 
 

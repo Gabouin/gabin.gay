@@ -6,7 +6,7 @@ const projects = [
     demo: "https://www.youtube.com/watch?v=C2K3zAZ9T1s",
     repo: "https://github.com/gabouin/perdican",
     page: "projects-pages/perdican.html",
-    hackatime: "APX Devboard",
+    hackatime: ["APX Devboard", "perdican-V1", "perdican-v1", "perdican-firmware"],
   },
   {
     title: "Pixl YSWS",
@@ -15,6 +15,7 @@ const projects = [
     demo: "https://pixl.hackclub.com/",
     repo: "https://github.com/hackclub/pixl",
     page: "projects-pages/pixl.html",
+    hackatime: ["pixl", "Pixl", "Pixl-v2"],
 
   }
 ];
