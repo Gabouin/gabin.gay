@@ -630,14 +630,14 @@ footer {
   color: rgb(95, 95, 95);
 }
 .photos-link { 
-  text-decoration-color: rgb(200, 118, 255); 
+  text-decoration-color: rgb(250, 164, 255); 
   text-decoration-style: dashed;
   color: rgb(95, 95, 95);
 }
 .photos-link:hover { 
-  text-decoration-color: rgb(214, 152, 255); 
+  text-decoration-color: rgb(250, 175, 255); 
   text-decoration-style: solid;
-  color: rgb(214, 152, 255); 
+  color: rgb(250, 175, 255); 
 }
 .hc-link:hover { 
   text-decoration-color: rgb(255, 180, 120); 
