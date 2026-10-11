@@ -717,6 +717,7 @@ footer {
 } 
 
 .project-card {
+  margin-top: -40px;
   width: min(900px, 85vw);
   min-height: 450px;
   display: flex;
@@ -838,7 +839,7 @@ footer {
   display: flex;
   justify-content: center;
   gap: 3px;
-  margin-top: -40px;
+  margin-top: -60px;
   margin-bottom: 30px;
   position: relative;
   z-index: 2;
@@ -866,10 +867,36 @@ footer {
 
 .scroll {
   grid-column: 1 / -1;
-  font-size: 1.2em;
+  font-size: 1em;
   text-align: center;
+  margin-bottom: 0;
+  margin-top: 0;
 
 }
+
+.scroll-btn {
+  grid-column: 1 / -1;
+  justify-self: center;
+  color: #727272;
+  width: 45px;
+  height: 35px;
+  flex-shrink: 0;
+  border-radius: 20%;
+  border: none;
+  background: white;
+  text-shadow: 0 5px 10px rgba(0, 0, 0, 0.3);
+  font-size: 2em;
+  cursor: pointer;
+  transition: transform 0.5s ease, background 0.5s ease;
+  margin-bottom: 30px;
+  animation: bounce 1.5s ease-in-out infinite;
+}
+
+@keyframes bounce {
+  0%, 100% { translate: 0 0; }
+  50%      { translate: 0 6px; }
+}
+
 
 @media screen and (max-width: 1024px) {
   .articles {
