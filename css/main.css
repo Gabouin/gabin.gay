@@ -867,14 +867,19 @@ body.images-hidden .flower {
   50%      { translate: 0 6px; }
 }
 
-/* ================= Responsive: tablets & phones ================= */
 
 @media screen and (max-width: 1024px) {
   body {
     display: flex;
     flex-direction: column;
     align-items: stretch;
-    padding-bottom: 5em;
+    padding-bottom: 0;
+  }
+
+  .pagering-footer {
+    position: static;
+    margin: 1.5em 0 1em;
+    order: 10;
   }
 
   #header {
@@ -925,7 +930,20 @@ body.images-hidden .flower {
     margin: 2em 1em 0;
   }
 
-  /* blog */
+  .box-4 .box-image {
+    background-size: 160%;
+    background-position: center -25%;
+  }
+
+  .box-3 .box-image {
+    background-position: center 20%;
+  }
+
+  .box-3 .box-label,
+  .box-4 .box-label {
+    opacity: 1;
+  }
+
   .articles { width: 90%; margin: 0 auto; }
 
   .article-title,
@@ -948,7 +966,6 @@ body.images-hidden .flower {
     flex-wrap: wrap;
   }
 
-  /* projects: card, then dots, then arrows below the dots */
   .projects-page {
     flex-direction: row;
     flex-wrap: wrap;
@@ -994,13 +1011,11 @@ body.images-hidden .flower {
   .projects-page .scroll-btn,
   .projects-page #project-grid { display: none; }
 
-  .projects-page { padding-bottom: 1em; }
   .projects-page .nav-btn { margin-bottom: 0; }
 
   .nav-btn { color: #222; }
   .nav-btn:hover { transform: none; }
 
-  /* photos */
   .gallery-large {
     grid-template-columns: repeat(auto-fit, minmax(0, 300px));
     padding: 0 16px;
@@ -1036,7 +1051,6 @@ body.images-hidden .flower {
 
   .toggle-flower img { width: 36px; }
 
-  /* home */
   p.about {
     font-size: 1.15rem;
     line-height: 1.55;
@@ -1058,7 +1072,6 @@ body.images-hidden .flower {
 
   .box { aspect-ratio: 1; }
 
-  /* projects */
   .big-project-title,
   .photo-title { font-size: 1.5em; }
 
@@ -1098,16 +1111,13 @@ body.images-hidden .flower {
     padding: 0;
   }
 
-  /* photos */
   .gallery-large { gap: 1em; padding: 0 12px; }
   .photo-description { font-size: 1em; }
 
-  /* contact + blog */
   .contact-card { padding: 1em 1.4em; }
   .newsletter-form input[type="email"] { width: 100%; }
 
-  /* flowers: smaller so they don't cover content */
-  .flower { width: 36px; }
+  .flower { width: 40px; }
 
   .pagering-footer {
     padding: 0.5em 12px;
