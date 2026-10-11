@@ -147,3 +147,43 @@ async function swapCard(renderNewContent, direction = 1) {
   cardEl.getAnimations().forEach(a => a.cancel());
   isCardAnimating = false;
 }
+
+function timeAgo(dateString) {
+  const seconds = Math.floor((Date.now() - new Date(dateString)) / 1000);
+
+  const units = [
+    ["y", 31536000],
+    ["mo", 2592000],
+    ["d", 86400],
+    ["h", 3600],
+    ["min", 60],
+  ];
+
+  for (const [label, size] of units) {
+    const value = Math.floor(seconds / size);
+    if (value >= 1) return `${value}${label} ago`;
+  }
+  return "just now";
+}
+
+const REPO = "Gabouin/gabin.gay"; 
+
+fetch(`https://api.github.com/repos/${REPO}/commits?per_page=1`)
+  .then(async (res) => {
+    const [last] = await res.json();
+
+  
+    const link = res.headers.get("Link");
+    const match = link && link.match(/page=(\d+)>; rel="last"/);
+    const count = match ? match[1] : 1;
+
+    const message = last.commit.message.split("\n")[0];
+    const sha = last.sha.slice(0, 7);
+    const ago = timeAgo(last.commit.committer.date);
+
+    document.getElementById("commit-info").innerHTML =
+      `<a href="${last.html_url}" target="_blank" rel="noopener">${sha}</a> - "${message}" - ${ago}`;
+  })
+  .catch(() => {
+    document.getElementById("commit-info").textContent = "";
+  });
