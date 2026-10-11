@@ -8,6 +8,7 @@
 
 :root {
   --text-col: 55%;
+  --page-gutter: 3rem;
 }
 
 *, *::before, *::after {
@@ -47,7 +48,7 @@ body {
   width: auto;
   display: flex-start;
   justify-content: center;
-  margin-left: 1.5%;
+  margin-left: var(--page-gutter);
 }
 
 .navbar ul {
@@ -58,7 +59,7 @@ body {
   background-color: white;
   padding: 6px;
   margin: 0;
-  margin-left: calc(var(--text-col) * 0.1);
+  margin-left: 0;
   border: 1px solid rgb(219, 217, 217);
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
 }
@@ -176,6 +177,7 @@ p.about {
   line-height: 1.6;
   margin: 0.8em 0 0 3em;
   padding-right: 1.5em;
+  margin-left: var(--page-gutter);
 }
 
 .wip {
@@ -827,8 +829,8 @@ footer {
 .toggle-no-flower {
   display: flex;
   align-items: center;
+  align-self: flex-start;
   margin-right: auto;
-  margin-left: 2%;
   margin-top: 5px;
 }
 
