@@ -15,7 +15,7 @@ const projects = [
     demo: "https://pixl.hackclub.com/",
     repo: "https://github.com/hackclub/pixl",
     page: "projects-pages/pixl.html",
-    hackatime: ["pixl", "Pixl", "Pixl-v2"],
+    hackatime: ["pixl", "Pixl", "Pixl-v2", "pixorpheus"],
 
   }
 ];

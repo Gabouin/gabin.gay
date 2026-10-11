@@ -658,7 +658,12 @@ footer {
 .pink-flower,
 .yellow-flower,
 .multicolor-flower,
-.multicolor-flower2 {
+.multicolor-flower2,
+.blue-flower2,
+.pink-flower2,
+.yellow-flower2,
+.multicolor-flower4,
+.multicolor-flower3 {
   position: absolute;
   width: clamp(40px, 9vw, 100px);
   height: auto;
@@ -670,11 +675,17 @@ footer {
 .home-page .multicolor-flower { top: 125px; left: 650px;}
 .home-page .multicolor-flower2 { top: 700px; left: 200px;}
 
-.photo-page .pink-flower { top: 620px; right: 450px;}
-.photo-page .blue-flower { top: 30px; right: 200px;}
-.photo-page .yellow-flower { top: 60px; left: 10px;}
-.photo-page .multicolor-flower { top: 125px; left: 650px;}
-.photo-page .multicolor-flower2 { top: 700px; left: 200px;}
+.photo-page .yellow-flower {top: 3%;  left: 5%;}
+.photo-page .blue-flower {top: 6%;  right: 8%;}
+.photo-page .multicolor-flower {top: 18%; left: 40%;}
+.photo-page .pink-flower {top: 28%; right: 12%;}
+.photo-page .multicolor-flower2 {top: 38%; left: 8%;}
+.photo-page .blue-flower2 {top: 48%; right: 30%;}
+.photo-page .yellow-flower2 {top: 58%; left: 55%;}
+.photo-page .pink-flower2 {top: 70%; left: 15%; }
+.photo-page .multicolor-flower3 {top: 80%; right: 6%;}
+.photo-page .multicolor-flower4 {top: 90%; left: 35%;}
+
 
 .projects-page .pink-flower { top: 620px; right: 450px;}
 .projects-page .blue-flower { top: 30px; right: 200px;}

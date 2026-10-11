@@ -56,6 +56,18 @@
     <p class="scroll">Scroll down</p>
     <button class="scroll-btn" id="scroll" aria-label="Scroll down">&#8595;</button>
 
+    <section id="project-grid" class="project-grod">
+      
+      
+
+
+    </section>
+
+    <script>
+    document.getElementById("scrollBtn").addEventListener("click", () => {
+      document.getElementById("projets").scrollIntoView({ behavior: "smooth" });
+    });
+    </script>
 
     <img src="images/illustrations/blue-flower.png" alt="blue pastel flower" class="flower blue-flower" />
     <!-- <img src="images/illustrations/pink-flower.png" alt="pink pastel flower" class="flower pink-flower" /> -->
@@ -67,9 +79,6 @@
     <script src="js/projects-data.js"></script>
     <script src="js/projects.js"></script>
     <script src="js/script.js"></script>
-    <script src="https://pagering.gideon.sh/embed.js" defer></script>
-    <footer class="pagering-footer">
-      <pagering-link theme="light"></pagering-link>
     </footer>
   </body>
 </html>

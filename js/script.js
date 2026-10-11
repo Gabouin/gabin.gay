@@ -6,7 +6,7 @@ window.addEventListener('load', () => {
   const flowers = [...document.querySelectorAll('.flower')].map(el => {
     const r = el.getBoundingClientRect();
 
-    el.style.position = 'fixed';
+    el.style.position = 'absolute';
     el.style.left = '0';
     el.style.top = '0';
     el.style.right = 'auto';
@@ -17,8 +17,8 @@ window.addEventListener('load', () => {
 
     return {
       el,
-      x: r.left,
-      y: r.top,
+      x: r.left + window.scrollX,
+      y: r.top + window.scrollY,
       w: r.width,
       h: r.height,
       vx: Math.cos(angle) * speed,
@@ -34,8 +34,8 @@ window.addEventListener('load', () => {
   function tick(now) {
     const dt = Math.min((now - last) / 1000, 0.05);
     last = now;
-    const W = window.innerWidth;
-    const H = window.innerHeight;
+    const W = document.documentElement.clientWidth;
+    const H = document.documentElement.scrollHeight;
 
     for (const f of flowers) {
       f.w = f.el.offsetWidth;
@@ -73,8 +73,8 @@ window.addEventListener('load', () => {
       f.el.classList.add('dragging');
       f.el.setPointerCapture(e.pointerId);
 
-      const offsetX = e.clientX - f.x;
-      const offsetY = e.clientY - f.y;
+      const offsetX = e.clientX + window.scrollX - f.x;
+      const offsetY = e.clientY + window.scrollY - f.y;
       let lastX = e.clientX, lastY = e.clientY, lastT = performance.now();
 
       function onMove(ev) {
@@ -85,8 +85,8 @@ window.addEventListener('load', () => {
         f.vy = (ev.clientY - lastY) / dtMove;
         lastX = ev.clientX; lastY = ev.clientY; lastT = t;
 
-        f.x = ev.clientX - offsetX;
-        f.y = ev.clientY - offsetY;
+        f.x = ev.clientX + window.scrollX - offsetX;
+        f.y = ev.clientY + window.scrollY - offsetY;
       }
 
       function onUp() {
