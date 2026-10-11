@@ -192,5 +192,5 @@ const toggle = document.getElementById("ImgToggle");
 
 toggle.addEventListener("click", () => {
   const hidden = document.body.classList.toggle("images-hidden");
-  toggle.textContent = hidden ? "Show flowers" : "Hide flowers";
+  toggle.setAttribute("aria-label", hidden ? "Show flowers" : "Hide flowers");
 });

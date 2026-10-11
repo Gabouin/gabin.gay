@@ -30,10 +30,11 @@ body {
   justify-content: space-between;
   align-items: center;
   padding: 20px 0 15px 0;
+  gap: 12px
 }
     
 .navbar {
-  width: var(--text-col);
+  width: auto;
   display: flex-start;
   justify-content: center;
   margin-left: 1.5%;
@@ -47,7 +48,7 @@ body {
   background-color: white;
   padding: 6px;
   margin: 0;
-  margin-left: 10%;
+  margin-left: calc(var(--text-col) * 0.1);
   border: 1px solid rgb(219, 217, 217);
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
 }
@@ -919,14 +920,52 @@ footer {
   color: #77b3cc
 }
 
+.toggle-no-flower {
+  display: flex;
+  align-items: center;
+  margin-right: auto;
+  margin-left: 20px;
+  margin-top: 5px;
+}
+
+.toggle-flower {
+  background: none;
+  border: none;
+  padding: 0;
+  cursor: pointer;
+}
+
+.toggle-flower img {
+  width: 48px;
+  height: auto;
+  display: block;
+  transition: transform 0.3s ease, opacity 0.3s ease;
+}
+
+.toggle-flower:hover img {
+
+  transform: scale(1.1);
+}
+
+body.images-hidden .toggle-flower img {
+  opacity: 0.5s;
+}
+
+.flower {
+  transition: opacity 0.8s ease;
+}
+
 body.images-hidden .flower {
   opacity: 0;
   pointer-events: none;
 }
 
-.flower {
-  transition: opacity 0.6s ease;
+#hackatime {
+  margin: 0;
+  font-size: 0.9em;
+  color: #666;
 }
+
 
 @keyframes bounce {
   0%, 100% { translate: 0 0; }
@@ -990,12 +1029,6 @@ body.images-hidden .flower {
   .nav-btn:hover {
     transform: none;
   }
-}
-
-#hackatime {
-  margin: 0;
-  font-size: 0.9em;
-  color: #666;
 }
 
 @media screen and (max-width: 600px) {
