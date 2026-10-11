@@ -86,6 +86,3 @@ async function loadHackatime(names) {
 
 renderProject(projects[current]);
 
-document.getElementById("scrollBtn").addEventListener("click", () => {
-  document.getElementById("project-grid").scrollIntoView({ behavior: "smooth" });
-});

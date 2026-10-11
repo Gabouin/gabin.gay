@@ -876,6 +876,17 @@ body.images-hidden .flower {
     padding-bottom: 0;
   }
 
+  .home-page .blue-flower,
+  .projects-page .blue-flower { top: 3%; left: auto; right: 8%; }
+  .home-page .pink-flower,
+  .projects-page .pink-flower { top: 55%; left: auto; right: 12%; }
+  .home-page .yellow-flower,
+  .projects-page .yellow-flower { top: 8%; left: 4%; right: auto; }
+  .home-page .multicolor-flower,
+  .projects-page .multicolor-flower { top: 20%; left: 40%; right: auto; }
+  .home-page .multicolor-flower2,
+  .projects-page .multicolor-flower2 { top: 70%; left: 10%; right: auto; }
+
   .pagering-footer {
     position: static;
     margin: 1.5em 0 1em;
@@ -1117,7 +1128,7 @@ body.images-hidden .flower {
   .contact-card { padding: 1em 1.4em; }
   .newsletter-form input[type="email"] { width: 100%; }
 
-  .flower { width: 40px; }
+  .flower { width: 48px; }
 
   .pagering-footer {
     padding: 0.5em 12px;
