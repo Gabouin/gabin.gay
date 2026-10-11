@@ -1,3 +1,11 @@
+@font-face {
+  font-family: "Gaybins-font";
+  src: url("../fonts/GaybinsFont-Regular.ttf") format("truetype");
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}
+
 :root {
   --text-col: 55%;
 }
@@ -19,6 +27,7 @@ img {
 }
 
 body {
+  font-family: "Gaybins-font", serif;
   display: grid;
   grid-template-columns: var(--text-col) 1fr;
   padding-bottom: 4.5em;
