@@ -95,25 +95,23 @@ body {
   text-decoration-style: solid;
   text-decoration-color: rgb(95, 95, 95);
   color: rgb(95, 95, 95);
-  font-size: 1.1em;
+  font-size: 1.3em;
 }
 .github-link {
   text-decoration-style: none;
   text-decoration-color: rgb(95, 95, 95);
   color: rgb(95, 95, 95);
-  font-size: 1.1em;
+  font-size: 1.3em;
 }
 .instagram-link:hover {
   text-decoration-style: wavy;
   text-decoration-color: rgb(0, 136, 255);
   color: rgb(95, 95, 95);
-  font-size: 1.1em;
 }
 .github-link:hover {
   text-decoration-style: wavy;
   text-decoration-color: rgb(0, 136, 255);
   color: rgb(95, 95, 95);
-  font-size: 1.1em;
 }
 .badge-placeholder {
   width: 88px;
@@ -354,7 +352,7 @@ a.box:active {
   padding-top: 0.5em;
   grid-column: 1 / -1;
   text-align: center;
-  font-size: 2em;
+  font-size: 2.2em;
 }
 .photo-description {
   color: rgb(95, 95, 95);
@@ -363,7 +361,7 @@ a.box:active {
   max-width: 80%;
   margin: 0 auto 2em;
   padding-bottom: 0.8em;
-  font-size: 1.3em;
+  font-size: 1.6em;
 }
 .newsletter-title {
   color: rgb(95, 95, 95);
@@ -627,7 +625,7 @@ footer {
   justify-content: center;
   gap: 25px;
   padding: 0px;
-  margin-top: -1em;
+  margin-top: -2em;
   min-height: 70vh;
   position: relative; 
   z-index: 1;
@@ -662,7 +660,7 @@ footer {
 
 #project-title {
   margin: 0;
-  font-size: 2em;
+  font-size: 2.2em;
   color: rgb(95, 95, 95);
 }
 
@@ -670,6 +668,7 @@ footer {
   margin-top: 5%;
   line-height: 1.6;
   color: #444;
+  font-size: 1.2em;
 }
 
 .project-header {
@@ -811,7 +810,7 @@ footer {
 
 .commit-info {
   color: rgb(95, 95, 95);
-  font-size: 1em;
+  font-size: 1.2em;
   line-height: 1.6;
 }
 
@@ -867,7 +866,7 @@ body.images-hidden .flower {
 
 #hackatime {
   margin: 0;
-  font-size: 0.9em;
+  font-size: 1.2em;
   color: #666;
 }
 
