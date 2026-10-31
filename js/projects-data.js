@@ -36,7 +36,39 @@ const smallProjects = [
     image: "images/projects/usb-hub.png",
     demo: "https://www.youtube.com/watch?v=UhorFzSv4f8",
     repo: "https://github.com/Gabouin/APX-USB-HUB",
-    page: "projects-pages/rcplane.html",
     hackatime: ["USB HUB"],
-  }
+  },
+  {
+    title: "HackPad",
+    description: "A 6-keys custom macropad with backlight, an oled screen with per-key animations and a volume knob. ",
+    image: "images/projects/hackpad.png",
+    demo: "https://www.youtube.com/watch?v=CXMXyju0Se0",
+    repo: "https://github.com/Gabouin/fan-plane-reactor",
+  },
+  {
+    title: "APX devboard",
+    description: "A cheap and tiny devboard to equip your tiniest hardware projects while having enough MCU power.",
+    image: "images/projects/devboard.png",
+    demo: "https://www.youtube.com/watch?v=CXMXyju0Se0",
+    repo: "https://github.com/Gabouin/pixorpheus",
+    hackatime: ["pixorpheus"],
+  },
+  {
+    title: "Pixorpheus",
+    description: "A slack bot made for PIXL, it manages a help flow, answers in threads as an AI roaster, works with a ton of commands.",
+    image: "images/projects/pixo.png",
+    demo: "https://www.youtube.com/watch?v=CXMXyju0Se0",
+    repo: "https://github.com/Gabouin/pixorpheus",
+    hackatime: ["pixorpheus"],
+  },
+  {
+    title: "Fan plane reactor",
+    description: "A small 3D designed fan with a plane reactor design. The fan speed is controlable with a slide potentiometer",
+    image: "images/projects/fan-plane1.png",
+    demo: "https://www.youtube.com/watch?v=CXMXyju0Se0",
+    repo: "https://github.com/Gabouin/fan-plane-reactor",
+  },
+
+  
 ]
+

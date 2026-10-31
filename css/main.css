@@ -919,6 +919,15 @@ body.images-hidden .flower {
   transform: translateY(-3px);
 }
 
+/* the big card's #hackatime is styled above */
+.small-hackatime {
+  margin: 0;
+  font-size: 0.9em;
+  color: #666;
+}
+
+.small-card .small-hackatime { margin: 0 0.8em 0.6em; }
+
 .small-card img { width: 100%; aspect-ratio: 4 / 3; object-fit: cover; }
 .small-card h3, .small-card p { margin: 0.6em 0.8em; }
 

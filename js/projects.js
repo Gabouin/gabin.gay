@@ -96,8 +96,18 @@ smallProjects.forEach(p => {
         <img src="${p.image}" alt="${p.title}">
         <h3>${p.title}</h3>
         <p>${p.description}</p>
+        <p class="small-hackatime" style="display: none"></p>
         <div class="small-links"></div>
     `;
+
+    if (p.hackatime) {
+        const time = card.querySelector(".small-hackatime");
+        time.style.display = '';
+        time.textContent = "Loading...";
+        loadHackatime(p.hackatime)
+            .then(t => time.textContent = `${t} on Hackatime`)
+            .catch(() => time.style.display = 'none');
+    }
 
     const links = card.querySelector(".small-links");
     if (p.demo) links.insertAdjacentHTML("beforeend",
