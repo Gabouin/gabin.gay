@@ -884,13 +884,21 @@ body.images-hidden .flower {
 .small-card {
   display: flex;
   flex-direction: column;
-  background: white;
+  background: rgb(255, 255, 255);
   box-shadow: 0 5px 15px rgba(0, 0, 0, 0.431);
   border-radius: 15px;
   overflow: hidden;
   text-decoration: none;
   color: inherit;
   transition: transform 0.4s ease;
+}
+
+.small-card img {
+  width: 100%;
+  aspect-ratio: 4/3;
+  object-fit: contain;
+  padding: 12px;
+  background-color: #f2f2f2;
 }
 
 .small-links {
@@ -919,7 +927,6 @@ body.images-hidden .flower {
   transform: translateY(-3px);
 }
 
-/* the big card's #hackatime is styled above */
 .small-hackatime {
   margin: 0;
   font-size: 0.9em;
