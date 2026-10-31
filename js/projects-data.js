@@ -17,5 +17,15 @@ const projects = [
     page: "projects-pages/pixl.html",
     hackatime: ["pixl", "Pixl", "Pixl-v2", "pixorpheus"],
 
+  },
+  {
+    title: "APX RC plane v2",
+    description: "A 3D printed lightweight RC plane. 120cm wingspan, 3-axis control, 720 grams, max speed of 80km/h.",
+    image: "images/projects/rcplane1.png",
+    demo: "https://www.youtube.com/watch?v=zryhsQqn61E",
+    repo: "https://github.com/Gabouin/RC-PLANE-V2",
+    page: "projects-pages/rcplane.html",
+    hackatime: null,
+
   }
 ];
