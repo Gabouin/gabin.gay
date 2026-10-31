@@ -9,6 +9,8 @@ const repo = document.getElementById("repo-link");
 const page = document.getElementById("page-link");
 const hackatime = document.getElementById("hackatime");
 const dots = document.getElementById("dots");
+const grid = document.getElementById("project-grid");
+const HACKATIME_USER = "U0A2SJ7B739";
 
 projects.forEach((p, i) => {
     const dot = document.createElement('button');
@@ -65,7 +67,6 @@ document.addEventListener('keydown', e => {
 });
 
 
-const HACKATIME_USER = "U0A2SJ7B739";
 
 async function fetchSeconds(name) {
     const url = `https://hackatime.hackclub.com/api/v1/users/${HACKATIME_USER}/stats`
@@ -86,3 +87,22 @@ async function loadHackatime(names) {
 
 renderProject(projects[current]);
 
+
+smallProjects.forEach(p => {
+    const card = document.createElement("div");
+    card.className = "small-card";
+
+    card.innerHTML = `
+        <img src="${p.image}" alt="${p.title}">
+        <h3>${p.title}</h3>
+        <p>${p.description}</p>
+        <div class="small-links"></div>
+    `;
+
+    const links = card.querySelector(".small-links");
+    if (p.demo) links.insertAdjacentHTML("beforeend",
+        `<a class="small-demo" href="${p.demo}" target="_blank" rel="noopener">Demo</a>`);
+     if (p.repo) links.insertAdjacentHTML("beforeend",
+        `<a class="small-repo" href="${p.repo}" target="_blank" rel="noopener">Repo</a>`);
+    grid.appendChild(card);
+    });

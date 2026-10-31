@@ -26,6 +26,17 @@ const projects = [
     repo: "https://github.com/Gabouin/RC-PLANE-V2",
     page: "projects-pages/rcplane.html",
     hackatime: null,
-
   }
 ];
+
+const smallProjects = [
+  {
+    title: "APX usb hub",
+    description: "A 4-port usb 2.0 usb hub with per-port fault indication thanks to PTCs and LEDs.",
+    image: "images/projects/usb-hub.png",
+    demo: "https://www.youtube.com/watch?v=UhorFzSv4f8",
+    repo: "https://github.com/Gabouin/APX-USB-HUB",
+    page: "projects-pages/rcplane.html",
+    hackatime: ["USB HUB"],
+  }
+]

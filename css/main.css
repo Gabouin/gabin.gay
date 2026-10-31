@@ -872,6 +872,57 @@ body.images-hidden .flower {
   color: #666;
 }
 
+#project-grid {
+  grid-column: 1/-1;
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
+  gap: 1.5em;
+  width: min(1000px, 90%);
+  margin: 2em auto;
+}
+
+.small-card {
+  display: flex;
+  flex-direction: column;
+  background: white;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.431);
+  border-radius: 15px;
+  overflow: hidden;
+  text-decoration: none;
+  color: inherit;
+  transition: transform 0.4s ease;
+}
+
+.small-links {
+  display: flex;
+  flex-wrap: flex;
+  gap: 8px;
+  margin: auto 0.8em 0.8em;
+}
+
+.small-demo,
+.small-repo {
+  padding: 6px 12px;
+  border-radius: 10px;
+  color: #222;
+  font-weight: bold;
+  font-size: 0.85em;
+  text-decoration: none;
+  transition: transform 0.4s ease;
+}
+
+.small-demo { background: rgb(255, 249, 194); }
+.small-repo { background: rgb(203, 239, 255); }
+
+.small-demo:hover,
+.small-repo:hover {
+  transform: translateY(-3px);
+}
+
+.small-card img { width: 100%; aspect-ratio: 4 / 3; object-fit: cover; }
+.small-card h3, .small-card p { margin: 0.6em 0.8em; }
+
+
 
 @keyframes bounce {
   0%, 100% { translate: 0 0; }
@@ -1030,8 +1081,7 @@ body.images-hidden .flower {
   }
 
   .projects-page .scroll,
-  .projects-page .scroll-btn,
-  .projects-page #project-grid { display: none; }
+  .projects-page .scroll-btn { display: none; }
 
   .projects-page .nav-btn { margin-bottom: 0; }
 
