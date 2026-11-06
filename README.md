@@ -14,8 +14,8 @@ My "little digital world", a handmade personal website with HTML and CSS.
 <div align="center">
 
 ![License](https://img.shields.io/badge/License-MIT-blue.svg)
-![Hackatime Badge](https://hackatime-badge.hackclub.com/U0A2SJ7B739/website)
-![Hosting](https://img.shields.io/badge/Hosted%20on-GitHub%20Pages-red.svg)
+![Hackatime Badge](https://hackatime-badge.hackclub.com/U0A2SJ7B739/website) +
+![Hackatime Badge](https://hackatime-badge.hackclub.com/U0A2SJ7B739/gabintavernier.com-v2)
 
 </div>
 
