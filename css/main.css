@@ -938,6 +938,13 @@ body.images-hidden .flower {
 .small-card img { width: 100%; aspect-ratio: 4 / 3; object-fit: contain; padding: 12px; }
 .small-card h3, .small-card p { margin: 0.6em 0.8em; }
 
+.role-list {
+  grid-column: 1/-1;
+  font-size: 1.8em;
+  padding: 0.5em 12.5em;
+  color: #626262;
+  line-height: 1;
+}
 
 
 @keyframes bounce {
