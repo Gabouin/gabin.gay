@@ -525,6 +525,54 @@ footer {
   flex-shrink: 0;
 }
 
+.pixl-link {
+  text-decoration-color: rgb(255, 189, 135); 
+  text-decoration-style: dashed;
+  color: rgb(95, 95, 95);
+}
+
+.pixl-link:hover {
+  text-decoration-color: rgb(255, 189, 135); 
+  text-decoration-style: solid;
+  color: rgb(255, 189, 135);
+}
+
+.sd-link {
+  text-decoration-color: rgb(252, 204, 255); 
+  text-decoration-style: wavy;
+  color: rgb(95, 95, 95);
+}
+
+.sd-link:hover {
+  text-decoration-color: rgb(252, 204, 255); 
+  text-decoration-style: solid;
+  color: rgb(252, 204, 255); 
+}
+
+.jame-link {
+  text-decoration-color: rgb(162, 207, 225); 
+  text-decoration-style: dotted;
+  color: rgb(95, 95, 95);
+}
+
+.jame-link:hover {
+  text-decoration-color: rgb(162, 207, 225); 
+  text-decoration-style: solid;
+  color: rgb(162, 207, 225); 
+}
+
+.macondo-link {
+  text-decoration-color: rgb(255, 200, 0); 
+  text-decoration-style: solid;
+  color: rgb(95, 95, 95);
+}
+
+.macondo-link:hover {
+  text-decoration-color: rgb(255, 200, 0); 
+  text-decoration-style: solid;
+  color: rgb(255, 200, 0); 
+}
+
 .projects-link { 
   text-decoration-color: rgb(129, 215, 255); 
   text-decoration-style: wavy;
