@@ -29,7 +29,7 @@ const projects = [
   },
   {
     title: "Portfolio v2",
-    description: "The personal page you are currently on! Made in html, css and js. Lowk cute and no fricking ai.",
+    description: "The personal page you are currently on! Made in html, css and js. Lowk cute and no fricking ai. Fun fact, the font is custom made by me.",
     image: "images/illustrations/multicolor flower.png",
     demo: "https://gabin.gay",
     repo: "https://github.com/gabouin/gabin.gay",

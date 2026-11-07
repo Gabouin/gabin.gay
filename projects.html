@@ -66,9 +66,12 @@
     <section id="project-grid" class="project-grid"></section>
 
     <script>
-    document.getElementById("scrollBtn").addEventListener("click", () => {
-      document.getElementById("projets").scrollIntoView({ behavior: "smooth" });
-    });
+    const scrollBtn = document.getElementById("scroll");
+    if (scrollBtn) {
+      scrollBtn.addEventListener("click", () => {
+        document.getElementById("project-grid").scrollIntoView({ behavior: "smooth", block: "start" });
+      });
+    }
     </script>
 
     <img src="images/illustrations/blue-flower.png" alt="blue pastel flower" class="flower blue-flower" />
