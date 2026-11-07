@@ -487,23 +487,23 @@ a.box:active {
   
 }
 .newsletter-grid {
-  grid-column: 1;
-  grid-row: 3;
+  grid-column: 1 / -1;
   align-self: start;
-  margin-left: 13%;
-  margin-right: 0;
-  margin-top: 2em;
+  margin: 3em 7% 0;
   display: grid;
-  grid-template-columns: 1fr;
-  gap: 1em;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 2em;
 }
+
 .newsletter1 {
   text-align: left;
-  border: 3px solid rgba(255, 0, 230, 0.304);
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.431);
   border-radius: 15px;
   padding: 0.2em 1.2em 0.2em;
   text-decoration: none;
+  transition: transform 0.5s;
 }
+
 .news1-title {
   font-size: 1.2em;
   font-weight: bold;
@@ -514,7 +514,8 @@ a.box:active {
   color: rgb(59, 59, 59)
 }
 .newsletter1:hover {
-  border: 7px solid rgba(255, 0, 230, 0.304);
+  transform: translateY(-5px);
+  transition: transform 0.5s;
 }
 footer {
   grid-column: 1 / -1;
