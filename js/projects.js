@@ -10,6 +10,8 @@ const page = document.getElementById("page-link");
 const hackatime = document.getElementById("hackatime");
 const dots = document.getElementById("dots");
 const grid = document.getElementById("project-grid");
+const prevBtn = document.getElementById("prev");
+const nextBtn = document.getElementById("next");
 const HACKATIME_USER = "U0A2SJ7B739";
 
 projects.forEach((p, i) => {
@@ -51,20 +53,38 @@ function renderProject(p) {
     });
 }
 
-function showProject(index) {
-    const direction = index - current;
-    current = (index + projects.length) % projects.length;
-    const p = projects[current];
-    swapCard(() => renderProject(p), direction);
+function updateNavState() {
+    prevBtn.disabled = false;
+    nextBtn.disabled = false;
 }
 
-document.getElementById("prev").addEventListener('click', () => showProject(current - 1));
-document.getElementById("next").addEventListener('click', () => showProject(current + 1));
+function showProject(index) {
+    const animating = typeof isCardAnimating !== 'undefined' && isCardAnimating;
+    if (animating) return;
+
+    const previousIndex = current;
+    const targetIndex = (index + projects.length) % projects.length;
+    const direction = targetIndex - previousIndex;
+
+    current = targetIndex;
+    const p = projects[current];
+    prevBtn.disabled = true;
+    nextBtn.disabled = true;
+    swapCard(() => {
+        renderProject(p);
+        updateNavState();
+    }, direction);
+}
+
+prevBtn.addEventListener('click', () => showProject(current - 1));
+nextBtn.addEventListener('click', () => showProject(current + 1));
 
 document.addEventListener('keydown', e => {
     if (e.key === 'ArrowLeft') showProject(current -1);
     if (e.key === 'ArrowRight') showProject(current +1);
 });
+
+updateNavState();
 
 
 

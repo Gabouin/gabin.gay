@@ -124,28 +124,33 @@ async function swapCard(renderNewContent, direction = 1) {
 
   const d = direction < 0 ? -1 : 1;
 
-  await cardEl.animate([
-    { opacity: 1, transform: 'translateX(0) scale(1)', filter: 'blur(0px)' },
-    { opacity: 0, transform: `translateX(${-30 * d}px) scale(0.98)`, filter: 'blur(4px)' }
-  ], {
-    duration: 300,
-    easing: 'cubic-bezier(0.4, 0, 1, 1)',
-    fill: 'forwards'
-  }).finished;
+  try {
+    await cardEl.animate([
+      { opacity: 1, transform: 'translateX(0) scale(1)', filter: 'blur(0px)' },
+      { opacity: 0, transform: `translateX(${-30 * d}px) scale(0.98)`, filter: 'blur(4px)' }
+    ], {
+      duration: 300,
+      easing: 'cubic-bezier(0.4, 0, 1, 1)',
+      fill: 'forwards'
+    }).finished;
 
-  renderNewContent(cardEl);
+    renderNewContent(cardEl);
 
-  await cardEl.animate([
-    { opacity: 0, transform: `translateX(${30 * d}px) scale(0.98)`, filter: 'blur(4px)' },
-    { opacity: 1, transform: 'translateX(0) scale(1)', filter: 'blur(0px)' }
-  ], {
-    duration: 650,
-    easing: 'cubic-bezier(0.22, 1, 0.36, 1)',
-    fill: 'forwards'
-  }).finished;
-
-  cardEl.getAnimations().forEach(a => a.cancel());
-  isCardAnimating = false;
+    await cardEl.animate([
+      { opacity: 0, transform: `translateX(${30 * d}px) scale(0.98)`, filter: 'blur(4px)' },
+      { opacity: 1, transform: 'translateX(0) scale(1)', filter: 'blur(0px)' }
+    ], {
+      duration: 650,
+      easing: 'cubic-bezier(0.22, 1, 0.36, 1)',
+      fill: 'forwards'
+    }).finished;
+  } finally {
+    cardEl.getAnimations().forEach(a => a.cancel());
+    isCardAnimating = false;
+    if (typeof updateNavState === 'function') {
+      updateNavState();
+    }
+  }
 }
 
 function timeAgo(dateString) {
