@@ -28,7 +28,7 @@ const projects = [
     hackatime: null,
   },
   {
-    title: "Portfolio v2",
+    title: "Gabin.gay",
     description: "The personal page you are currently on! Made in html, css and js. Lowk cute and no fricking ai. Fun fact, the font is custom made by me.",
     image: "images/illustrations/multicolor flower.png",
     demo: "https://gabin.gay",
@@ -51,14 +51,16 @@ const smallProjects = [
     description: "A 6-keys custom macropad with backlight, an oled screen with per-key animations and a volume knob. ",
     image: "images/projects/hackpad-nobg.png",
     demo: "https://www.youtube.com/watch?v=CXMXyju0Se0",
-    repo: "https://github.com/Gabouin/fan-plane-reactor",
+    repo: "https://github.com/Gabouin/hackpad",
   },
   {
     title: "APX devboard",
     description: "A cheap and tiny devboard to equip your tiniest hardware projects while having enough MCU power.",
     image: "images/projects/devboard-nobg.png",
     demo: "https://www.youtube.com/watch?v=CXMXyju0Se0",
-    repo: "https://github.com/Gabouin/pixorpheus",  },
+    repo: "https://github.com/Gabouin/APX_DEVBOARD",
+    hackatime: ["RESOLUTION DEVBOARD"],
+  },
   {
     title: "Pixorpheus",
     description: "A slack bot made for PIXL, it manages a help flow, answers in threads as an AI roaster, works with a ton of commands.",
