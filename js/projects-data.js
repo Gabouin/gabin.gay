@@ -26,6 +26,14 @@ const projects = [
     repo: "https://github.com/Gabouin/RC-PLANE-V2",
     page: "projects-pages/rcplane.html",
     hackatime: null,
+  },
+  {
+    title: "Portfolio v2",
+    description: "The personal page you are currently on! Made in html, css and js. Lowk cute and no fricking ai.",
+    image: "images/illustrations/multicolor flower.png",
+    demo: "https://gabin.gay",
+    repo: "https://github.com/gabouin/gabin.gay",
+    hackatime: ["gabintavernier.com-v2", "website"],
   }
 ];
 
