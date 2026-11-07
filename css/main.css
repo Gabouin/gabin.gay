@@ -847,9 +847,9 @@ footer {
   height: 55px;
   flex-shrink: 0;
   border-radius: 20%;
-  border: 5px solid rgb(255, 255, 255);
-  background: white;
-  text-shadow: 0 5px 10px rgba(0, 0, 0, 0.3);
+  border: 1px solid rgba(90, 90, 90, 0.12);
+  background: transparent;
+  text-shadow: 0 5px 10px rgba(0, 0, 0, 0.15);
   font-size: 3em;
   cursor: pointer;
   transition: transform 0.5s ease, background 0.5s ease;
@@ -857,6 +857,7 @@ footer {
 
 .nav-btn:hover {
   transform: translateY(-5px);
+  background: transparent;
 }
 
 .dots {
@@ -1050,7 +1051,11 @@ body.images-hidden .flower {
   font-size: 1.8em;
   padding: 0.5em 12.5em;
   color: #626262;
-  line-height: 1;
+  line-height: 1.3;
+}
+
+.role-list li {
+  margin-bottom: 0.7em;
 }
 
 
@@ -1189,15 +1194,28 @@ body.images-hidden .flower {
   .projects-page #project-grid { order: 7; }
 
   .projects-viewer {
-    display: flex;
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    grid-template-areas:
+      "card card"
+      "prev next";
+    align-items: center;
+    justify-items: center;
     order: 2;
+    width: 100%;
+    padding: 0 8px;
+    gap: 12px;
+    min-height: unset;
+    margin-top: 0;
   }
 
   .projects-page .project-card {
+    grid-area: card;
+    position: relative;
     order: 0;
     flex: 0 0 auto;
     flex-direction: column;
-    width: calc(100% - 32px);
+    width: calc(100% - 16px);
     max-width: 640px;
     min-height: 0;
     margin: 0 auto;
@@ -1211,12 +1229,36 @@ body.images-hidden .flower {
   .project-info { padding: 20px; flex: 1; }
 
   .projects-page .nav-btn {
+    grid-area: auto;
+    position: static;
+    transform: none;
+    z-index: 2;
     order: 3;
     flex: 0 0 auto;
-    margin-bottom: 8px;
+    margin-bottom: 0;
+    width: 56px;
+    height: 56px;
+    font-size: 2.2em;
+    line-height: 1;
+    padding: 0;
+    border-radius: 999px;
+    border: none;
+    background: transparent;
+    box-shadow: none;
+    color: #222;
   }
 
-  .projects-page .nav-btn { margin-bottom: 0; }
+  .projects-page #prev {
+    grid-area: prev;
+    left: auto;
+    right: auto;
+  }
+
+  .projects-page #next {
+    grid-area: next;
+    left: auto;
+    right: auto;
+  }
 
   .nav-btn { color: #222; }
   .nav-btn:hover { transform: none; }
@@ -1236,6 +1278,15 @@ body.images-hidden .flower {
   }
 
   .photo-description { max-width: 90%; font-size: 1.1em; }
+
+  .role-list {
+    max-width: 800px;
+    width: min(92%, 800px);
+    margin: 0 auto;
+    padding: 0.5em 1.2em;
+    font-size: clamp(1.05rem, 2vw, 1.5rem);
+    line-height: 1.5;
+  }
 
   .contact-links { padding: 0 16px; }
 }
@@ -1288,6 +1339,13 @@ body.images-hidden .flower {
 
   .project-info { padding: 16px; gap: 10px; }
 
+  .role-list {
+    width: min(94%, 700px);
+    padding: 0.5em 0.9em;
+    font-size: 1rem;
+    line-height: 1.6;
+  }
+
   .project-header {
     flex-wrap: wrap;
     gap: 4px 12px;
@@ -1311,9 +1369,9 @@ body.images-hidden .flower {
   .projects-links { margin-top: 4px; }
 
   .nav-btn {
-    width: 50px;
-    height: 44px;
-    font-size: 2em;
+    width: 52px;
+    height: 48px;
+    font-size: 2.4em;
     line-height: 1;
     padding: 0;
   }
