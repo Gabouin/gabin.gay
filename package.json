@@ -1,0 +1,11 @@
+{
+  "name": "gabintavernier-com-v2",
+  "version": "1.0.0",
+  "private": true,
+  "scripts": {
+    "build": "node js/build.js"
+  },
+  "dependencies": {
+    "marked": "^16.0.0"
+  }
+}
