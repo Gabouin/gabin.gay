@@ -14,6 +14,14 @@ function stripFirstH1(markdown) {
   return markdown.replace(/^#\s+.*\n+/, '');
 }
 
+function escapeHtml(s) {
+  return s
+    .replace(/&/g, '&amp;')
+    .replace(/</g, '&lt;')
+    .replace(/>/g, '&gt;')
+    .replace(/"/g, '&quot;');
+}
+
 function renderPostPage(title, html) {
   return `<!doctype html>
 <html lang="en">
@@ -24,76 +32,246 @@ function renderPostPage(title, html) {
     <link rel="stylesheet" href="../css/main.css" />
     <script src="../js/script.js" defer></script>
     <style>
+      :root {
+        --blue: #cfe8f7;
+        --pink: #fbd5e5;
+        --yellow: #fdf1b8;
+        --lilac: #e4d9f7;
+        --ink: #1f1d24;
+        --ink-soft: #3a3841;
+        --muted: #7b7884;
+        --line: #1f1d24;
+      }
+
       body {
         background: #fff;
-        color: #111;
+        color: var(--ink);
+      }
+
+      ::selection {
+        background: var(--pink);
       }
 
       .article-shell {
-        max-width: 820px;
-        margin: 6rem auto 3rem;
-        padding: 2.2rem 2rem 2.5rem;
+        max-width: 80%;
+        margin: 6rem auto 4rem;
+        padding: 2.4rem 2.4rem 3rem;
         background: #fffdf9;
-        border: 1px solid rgba(0, 0, 0, 0.08);
-        border-radius: 18px;
-        box-shadow: 0 12px 32px rgba(0, 0, 0, 0.08);
+        border: 2px solid var(--line);
+        border-radius: 22px;
+        box-shadow: 8px 8px 0 var(--pink);
       }
 
+      /* Back link : pastille pastel */
+      .article-shell .back-link {
+        display: inline-block;
+        margin-bottom: 1.6rem;
+        padding: 0.3rem 0.9rem;
+        background: var(--blue);
+        color: var(--ink);
+        border: 2px solid var(--line);
+        border-radius: 999px;
+        font-size: 0.9rem;
+        font-weight: 600;
+        text-decoration: none;
+        transition: transform 0.15s ease, background 0.15s ease;
+      }
+
+      .article-shell .back-link:hover {
+        background: var(--yellow);
+        transform: translate(-3px, -2px) rotate(-2deg);
+      }
+
+      /* Titres */
       .article-shell h1,
       .article-shell h2,
       .article-shell h3 {
-        color: #111;
+        color: var(--ink);
         line-height: 1.2;
       }
 
       .article-shell h1 {
-        font-size: clamp(2rem, 4vw, 3rem);
-        margin-bottom: 1rem;
+        font-size: clamp(2rem, 4.5vw, 3rem);
+        margin: 0 0 0.8rem;
+        text-decoration: underline wavy var(--pink);
+        text-decoration-thickness: 5px;
+        text-underline-offset: 10px;
+      }
+
+      .article-shell h1 + p > em:only-child {
+        color: var(--muted);
       }
 
       .article-shell h2 {
-        font-size: clamp(1.4rem, 2.5vw, 2rem);
-        margin-top: 2.2rem;
+        display: inline-block;
+        font-size: clamp(1.4rem, 2.6vw, 1.9rem);
+        margin: 2.6rem 0 0.9rem;
+        text-decoration: underline wavy var(--blue);
+        text-decoration-thickness: 4px;
+        text-underline-offset: 8px;
       }
 
       .article-shell h3 {
         font-size: 1.2rem;
-        margin-top: 1.5rem;
+        margin: 1.8rem 0 0.5rem;
+        text-decoration: underline wavy var(--yellow);
+        text-decoration-thickness: 3px;
+        text-underline-offset: 6px;
       }
 
+      /* Texte */
       .article-shell p,
       .article-shell li {
         font-size: 1.08rem;
         line-height: 1.8;
-        color: #2f2f2f;
+        color: var(--ink-soft);
+      }
+
+      .article-shell p {
+        margin: 0 0 1.2rem;
       }
 
       .article-shell ul,
       .article-shell ol {
         padding-left: 1.5rem;
+        margin: 0 0 1.4rem;
       }
 
-      .article-shell a {
-        color: #0a5f8f;
-        text-decoration: underline;
+      .article-shell li::marker {
+        color: #e88bb4;
+      }
+
+      .article-shell li + li {
+        margin-top: 0.3rem;
       }
 
       .article-shell strong {
-        color: #111;
+        color: var(--ink);
+        background: linear-gradient(transparent 60%, var(--yellow) 60%);
       }
 
-      .article-shell .back-link {
-        display: inline-block;
-        margin-bottom: 1.5rem;
-        color: #333;
-        text-decoration: none;
-        font-weight: 600;
+      /* Liens : soulignement ondulé */
+      .article-shell a:not(.back-link) {
+        color: var(--ink);
+        text-decoration: underline wavy #6bb6e6;
+        text-decoration-thickness: 2px;
+        text-underline-offset: 4px;
+        transition: background 0.15s ease;
+      }
+
+      .article-shell a:not(.back-link):hover {
+        background: var(--blue);
+      }
+
+      /* Citations : encadré jaune */
+      .article-shell blockquote {
+        margin: 1.8rem 0;
+        padding: 0.9rem 1.2rem;
+        background: var(--yellow);
+        border: 2px solid var(--line);
+        border-radius: 16px;
+        box-shadow: 5px 5px 0 var(--lilac);
+      }
+
+      .article-shell blockquote p {
+        margin: 0;
+      }
+
+      /* Code */
+      .article-shell code {
+        padding: 0.12em 0.4em;
+        background: var(--lilac);
+        border-radius: 6px;
+        font-size: 0.92em;
+      }
+
+      .article-shell pre {
+        margin: 1.6rem 0;
+        padding: 1.1rem 1.2rem;
+        background: #1f1d24;
+        color: #f3f0f7;
+        border: 2px solid var(--line);
+        border-radius: 16px;
+        box-shadow: 5px 5px 0 var(--blue);
+        overflow-x: auto;
+        line-height: 1.6;
+      }
+
+      .article-shell pre code {
+        padding: 0;
+        background: none;
+        color: inherit;
+        font-size: 0.95rem;
+      }
+
+      /* Images : style polaroid */
+      .article-shell img {
+        display: block;
+        max-width: 100%;
+        height: auto;
+        margin: 2rem auto;
+        border: 2px solid var(--line);
+        border-radius: 14px;
+        box-shadow: 6px 6px 0 var(--pink);
+        transition: transform 0.2s ease;
+      }
+
+      .article-shell img:hover {
+        transform: rotate(-1deg) scale(1.01);
+      }
+
+      /* Tableaux */
+      .article-shell table {
+        width: 100%;
+        margin: 1.6rem 0;
+        border-collapse: separate;
+        border-spacing: 0;
+        border: 2px solid var(--line);
+        border-radius: 14px;
+        overflow: hidden;
+      }
+
+      .article-shell th,
+      .article-shell td {
+        padding: 0.6rem 0.9rem;
+        border-bottom: 1px solid rgba(31, 29, 36, 0.15);
+        text-align: left;
+      }
+
+      .article-shell th {
+        background: var(--blue);
+      }
+
+      .article-shell tr:last-child td {
+        border-bottom: none;
+      }
+
+      /* Séparateur : fleurs */
+      .article-shell hr {
+        border: none;
+        margin: 2.6rem 0;
+        text-align: center;
+        height: 1.5rem;
+      }
+
+      .article-shell hr::after {
+        content: "✿  ✿  ✿";
+        color: #e88bb4;
+        letter-spacing: 0.4em;
+        font-size: 1.2rem;
       }
 
       @media screen and (max-width: 700px) {
         .article-shell {
-          margin: 3.5rem 1rem 2rem;
-          padding: 1.25rem 1rem 2rem;
+          margin: 3.5rem 0.8rem 2rem;
+          padding: 1.3rem 1.1rem 2rem;
+          border-radius: 16px;
+          box-shadow: 5px 5px 0 var(--pink);
+        }
+
+        .article-shell p,
+        .article-shell li {
+          font-size: 1.02rem;
         }
       }
     </style>
@@ -122,6 +300,7 @@ function renderPostPage(title, html) {
 
     <main class="article-shell">
       <a class="back-link" href="../blog.html">← Back to blog</a>
+      <h1>${escapeHtml(title)}</h1>
       ${html}
     </main>
   </body>

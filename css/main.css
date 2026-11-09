@@ -663,6 +663,10 @@ footer {
   grid-template-rows: auto auto 1fr auto;
 }
 
+body.blog-page {
+  display: block;
+}
+
 .blue-flower,
 .pink-flower,
 .yellow-flower,
