@@ -35,8 +35,8 @@ function renderPostPage(title, html) {
       :root {
         --blue: #d4f3ff;
         --blue-soft: #d4f3ff;
-        --pink: #FFF4FD;
-        --yellow: #FEF7C5;
+        --pink: #ffe1f9;
+        --yellow: #fff5a6;
         --lilac: #e4d9f7;
         --ink: #1f1d24;
         --ink-soft: #3a3841;
@@ -71,11 +71,11 @@ function renderPostPage(title, html) {
         font-size: 0.9rem;
         font-weight: 600;
         text-decoration: none;
-        transition: transform 0.15s ease, background 0.15s ease;
+        transition: transform 0.3s ease, background 0.3s ease;
       }
 
       .article-shell .back-link:hover {
-        background: var(--yellow);
+        transform: translateY(-3px);
       }
 
       /* Titres */
