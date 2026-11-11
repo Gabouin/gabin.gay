@@ -65,7 +65,7 @@ npm install
 python3 -m http.server 8000
 ```
 
-Then open [http://localhost:8000/pages/](http://localhost:8000/pages/) in your browser. Use a local server rather than opening the files directly, because some scripts use `fetch` and won't work from `file://`.
+Then open [http://localhost:8000/](http://localhost:8000/) in your browser. Use a local server rather than opening the files directly, because some scripts use `fetch` and won't work from `file://`.
 
 ### Building the blog
 

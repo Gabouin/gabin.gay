@@ -3,7 +3,7 @@ const path = require('path');
 const { marked } = require('marked');
 
 const rootDir = path.resolve(__dirname, '..');
-const postsDir = path.join(rootDir, 'posts');
+const postsDir = path.join(rootDir, 'pages', 'posts');
 
 function getTitle(markdown, fallback) {
   const match = markdown.match(/^#\s+(.+)$/m);
@@ -29,8 +29,8 @@ function renderPostPage(title, html) {
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>${title}</title>
-    <link rel="stylesheet" href="../css/main.css" />
-    <script src="../js/script.js" defer></script>
+    <link rel="stylesheet" href="../../css/main.css" />
+    <script src="../../js/script.js" defer></script>
     <style>
       :root {
         --blue: #cfe8f7;
@@ -280,7 +280,7 @@ function renderPostPage(title, html) {
     <div id="header">
       <nav class="navbar">
         <ul>
-          <li><a href="../index.html">Gabin</a></li>
+          <li><a href="../../index.html">Gabin</a></li>
           <li><a href="../projects.html">Projects</a></li>
           <li><a href="../photos.html">Photos</a></li>
           <li><a href="../role.html">Experience</a></li>
@@ -289,7 +289,7 @@ function renderPostPage(title, html) {
       </nav>
       <nav class="toggle-no-flower">
         <button id="ImgToggle" class="toggle-flower">
-          <img src="../images/illustrations/no-flower.png" alt="no flower btn" />
+          <img src="../../images/illustrations/no-flower.png" alt="no flower btn" />
         </button>
       </nav>
       <div class="btns">
