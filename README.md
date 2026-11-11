@@ -32,7 +32,7 @@ A cute space for me to showcase my projects, my photos, what i do in my life. Yo
 
 <br>
 <p align="center">
-  <img width=80% alt="Screenshot 2026-07-16 at 12 15 07 am" src="https://github.com/user-attachments/assets/6c42a8c3-ce39-4f84-be72-447cd1dc0189" />
+  <img width=80% alt="home page of gabin.gay" src="images/readme/home.png" />
 </p>
 
 ## About the Project
@@ -43,7 +43,8 @@ A cute space for me to showcase my projects, my photos, what i do in my life. Yo
 
 - **Animated boxes** on the home page that reveal my pictures and projects on hover
 - **Photography gallery** with picture details on hover
-- **Hand Drawn** cute flowers all over the website, you ca drag and throw them, they'll bounce everywhere!
+- **Hand-drawn** cute flowers all over the website, you ca drag and throw them, they'll bounce everywhere!
+-**Hand-drawn** custom font, visible all over the website.
 - **Markdown-rendered article page** thanks to a js script that transform the md written article in html
 - **Commit fetch** in the footer to know the latest update!
 - **Fully responsive** layout, it absoluetly works on a phone (but still a bit more shitty than on a computer)
