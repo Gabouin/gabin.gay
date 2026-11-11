@@ -78,7 +78,6 @@ function renderPostPage(title, html) {
         transform: translateY(-3px);
       }
 
-      /* Titres */
       .article-shell h1,
       .article-shell h2,
       .article-shell h3 {
@@ -146,7 +145,6 @@ function renderPostPage(title, html) {
         background: linear-gradient(transparent 60%, var(--yellow) 60%);
       }
 
-      /* Liens : soulignement ondulé */
       .article-shell a:not(.back-link) {
         color: var(--ink);
         text-decoration: underline wavy #d4f3ff;
@@ -159,7 +157,6 @@ function renderPostPage(title, html) {
         background: var(--blue-soft);
       }
 
-      /* Citations : encadré jaune */
       .article-shell blockquote {
         margin: 1.8rem 0;
         padding: 0.9rem 1.2rem;
@@ -173,7 +170,6 @@ function renderPostPage(title, html) {
         margin: 0;
       }
 
-      /* Code */
       .article-shell code {
         padding: 0.12em 0.4em;
         background: var(--lilac);
@@ -200,7 +196,6 @@ function renderPostPage(title, html) {
         font-size: 0.95rem;
       }
 
-      /* Images : style polaroid */
       .article-shell img {
         display: block;
         max-width: 100%;
@@ -216,7 +211,6 @@ function renderPostPage(title, html) {
         transform: rotate(-1deg) scale(1.01);
       }
 
-      /* Tableaux */
       .article-shell table {
         width: 100%;
         margin: 1.6rem 0;
@@ -242,7 +236,6 @@ function renderPostPage(title, html) {
         border-bottom: none;
       }
 
-      /* Séparateur : fleurs */
       .article-shell hr {
         border: none;
         margin: 2.6rem 0;

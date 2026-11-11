@@ -190,7 +190,7 @@ p.about {
 }
 
 .box-1, .box-2, .box-3, .box-4 {
-  box-shadow: 0 10px 20px rgba(198, 198, 198, 0.431);
+  box-shadow: 0 10px 20px rgba(216, 216, 216, 0.431);
 }
 
 .box-1 { grid-area: box-1; }
@@ -340,17 +340,19 @@ a.box:active {
   height: 2em;
 }
 .photo {
+  isolation: isolate;
   position: relative;
   overflow: hidden;
   transition: transform 0.6s ;
   border-radius: 10px;
 }
 .photo img {
+  will-change: transform; /* YOOOO this shi makes the page so smooth */
   display: block;
   border-radius: 10px;
   width: 100%;
   height: 100%;
-  transition: transform 0.4s ease;
+  transition: transform 0.6s ease-in-out;
 }
 .photo:hover img,
 .photo:focus-within img { 
@@ -373,7 +375,7 @@ a.box:active {
   );
   opacity: 0;
   transform: translateY(12px);
-  transition: opacity 0.3s ease, transform 0.3s ease;
+  transition: opacity 0.6s ease-in-out, transform 0.6s ease-in-out;
   pointer-events: none;
 }
 
