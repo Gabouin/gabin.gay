@@ -8,7 +8,7 @@
 </h1>
 
 <h4 align="center">
-My "little digital world", a handmade personal website with HTML and CSS.
+A cute space for me to showcase my projects, my photos, what i do in my life. You could call this a personnal website!
 </h4>
 
 <div align="center">
@@ -21,6 +21,7 @@ My "little digital world", a handmade personal website with HTML and CSS.
 
 <p align="center">
   <a href="#about-the-project">About</a> •
+  <a href="#getting-started">Getting Started</a> •
   <a href="#pages">Pages</a> •
   <a href="#screenshots">Screenshots</a> •
   <a href="#repository-structure">Structure</a> •
@@ -36,26 +37,53 @@ My "little digital world", a handmade personal website with HTML and CSS.
 
 ## About the Project
 
-**[Gabin.gay](https://gabin.gay)** is my personal website, where I share my hardware projects, my analog photography and (soon) my blog/newsletter. Everything is written by hand: no framework, no build step, just HTML and CSS.
+**[Gabin.gay](https://gabin.gay)** is my personal website, where I share my hardware projects, my analog photography and (soon) my digital photography as well as my experience/past roles in Hack Club and an article page.
 
 ### Features
 
 - **Animated boxes** on the home page that reveal my pictures and projects on hover
-- **Analog photography gallery** shot on film, on Reunion Island and elsewhere
-- **Newsletter subscription** powered by Buttondown (I lowk got my acc suspended but will be up soon)
-- **Page ring webring** in the footer to discover other Hack Clubbers' websites
-- **88x31 badge** because a personal website without one is not a real personal website
-- **Fully responsive** layout, from desktop grids to stacked mobile views
-- **Cutie pastel colors** and wavy underlines everywhere
+- **Photography gallery** with picture details on hover
+- **Hand Drawn** cute flowers all over the website, you ca drag and throw them, they'll bounce everywhere!
+- **Markdown-rendered article page** thanks to a js script that transform the md written article in html
+- **Commit fetch** in the footer to know the latest update!
+- **Fully responsive** layout, it absoluetly works on a phone (but still a bit more shitty than on a computer)
+- **Cutie pastel colors** and wavy underlines everywhere bc why not
+
+## Getting Started
+
+To run the site locally you only need [Node.js](https://nodejs.org) (for the blog build).
+
+```sh
+# 1. clone the repo
+git clone https://github.com/Gabouin/gabin.gay.git
+cd gabin.gay
+
+# 2. install the dependencies (only needed for the blog build)
+npm install
+
+# 3. serve the site from the repo root
+python3 -m http.server 8000
+```
+
+Then open [http://localhost:8000/pages/](http://localhost:8000/pages/) in your browser. Use a local server rather than opening the files directly, because some scripts use `fetch` and won't work from `file://`.
+
+### Building the blog
+
+Blog posts are written in Markdown in `pages/posts/*.md`. To turn them into HTML:
+
+```sh
+npm run build
+```
+
+This generates a `.html` file next to each `.md` file.
 
 ## Pages
 
 - `index.html` home page, with the animated boxes
-- `projects.html` my hardware and software projects - will push it once finished
+- `projects.html` my hardware and software projects
 - `photos.html` my analog photography gallery
 - `role.html` my experience at Hack Club and outside of it
-- `blog.html` blog/newsletters archive + subscription form
-- `contact.html` contact cards (hidden from the navbar, because it's useless for the moment, I have a github and instagram link on every page but it's still alive)
+- `blog.html` small page with my past articles
 
 ## Screenshots
 
@@ -78,12 +106,16 @@ My "little digital world", a handmade personal website with HTML and CSS.
 
 ## Repository Structure
 
-- `*.html` one file per page
+- `index.html` the home page (kept at the root so GitHub Pages serves it)
+- `pages/` the other pages (`projects`, `photos`, `role`, `blog`, `contact`)
+- `pages/posts/` blog articles: Markdown sources (`.md`) and the HTML generated from them
+- `pages/projects-pages/` one detail page per project
 - `css/main.css` the single stylesheet for the whole site
-- `images/` site assets (photos, badges, box illustrations)
-- `images/projects/` project images for the projects page
-- `js/` scripts
-- `images/readme/` screenshots used in this README
+- `js/` scripts: `script.js` (shared behaviour), `projects.js` and `projects-data.js` (projects page), `build.js` (Markdown to HTML for the blog)
+- `fonts/` custom font
+- `images/` site assets (`analog/` photos, `illustrations/` flowers and badges, `projects/` project images, `readme/` screenshots used in this README)
+- `package.json` npm dependencies and the `build` script
+- `CNAME` custom domain for GitHub Pages
 
 ## Contributing
 
