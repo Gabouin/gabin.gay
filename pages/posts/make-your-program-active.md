@@ -10,15 +10,15 @@ If you want people to start talking and make friends in your program's channel, 
 
 ## Run community events!
 
-Show & Tells are events that regularly happen in [Hack Club](https://hackclub.com)'s community. In them, teens get to showcase and talk about one of their projects for a few minutes, while other teens listen to the presentation and get inspired. 
+Show and Tells are events that regularly happen in [Hack Club](https://hackclub.com)'s community. In them, teens get to showcase and talk about one of their projects for a few minutes, while other teens listen to the presentation and get inspired. 
 
-From what I've seen, they are one of the best ways to improve the quality of conversations in the program's channel which they are organized for. Teens talking proudly about the projects they just finished to other teens is the perfect way to bring up good energy, positive reactions and even motivation for those other teens to keep it up with projects. This will start discussions about the projects seen, how did they do it, what for, how to recreate it, and these discussions would last even after the Show & Tell ends. 
+From what I've seen, they are one of the best ways to improve the quality of conversations in the program's channel which they are organized for. Teens talking proudly about the projects they just finished to other teens is the perfect way to bring up good energy, positive reactions and even motivation for those other teens to keep it up with projects. This will start discussions about the projects seen, how did they do it, what for, how to recreate it, and these discussions would last even after the Show and Tell ends. 
 
-### How to run a high quality show & tell
+### How to run a high quality show and tell
 
-Running a Show & Tell is actually **pretty easy** and can almost be improvised! You just need to announce it beforehand, start a huddle in your channel and just let people come and present their projects! However, if you want your show & tell to actually create engagement, I have a few tips for you that i got to learn from my past experience. 
+Running a Show and Tell is actually **pretty easy** and can almost be improvised! You just need to announce it beforehand, start a huddle in your channel and just let people come and present their projects! However, if you want your show and tell to actually create engagement, I have a few tips for you that i got to learn from my past experience. 
 
-1. **Don't run a Show & Tell alone!** You'll need at least another person to help you in the background. While you're the host of the Show & Tell and get to animate it, someone has to write down the projects presented, verify if they were actually shipped to your program (it's usually a requirement in Show & Tells), look for the project's repo to link in the chat, time their presentation (if you set a limit time) and more!
+1. **Don't run a Show and Tell alone!** You'll need at least another person to help you in the background. While you're the host of the Show and Tell and get to animate it, someone has to write down the projects presented, verify if they were actually shipped to your program (it's usually a requirement in Show and Tells), look for the project's repo to link in the chat, time their presentation (if you set a limit time) and more!
 2. **
 
 ## Still being written 

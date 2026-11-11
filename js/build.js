@@ -33,9 +33,10 @@ function renderPostPage(title, html) {
     <script src="../../js/script.js" defer></script>
     <style>
       :root {
-        --blue: #cfe8f7;
-        --pink: #fbd5e5;
-        --yellow: #fdf1b8;
+        --blue: #d4f3ff;
+        --blue-soft: #d4f3ff;
+        --pink: #FFF4FD;
+        --yellow: #FEF7C5;
         --lilac: #e4d9f7;
         --ink: #1f1d24;
         --ink-soft: #3a3841;
@@ -56,20 +57,16 @@ function renderPostPage(title, html) {
         max-width: 80%;
         margin: 6rem auto 4rem;
         padding: 2.4rem 2.4rem 3rem;
-        background: #fffdf9;
-        border: 2px solid var(--line);
         border-radius: 22px;
-        box-shadow: 8px 8px 0 var(--pink);
+        box-shadow: 0 10px 30px rgba(0, 0, 0, 0.431);
       }
 
-      /* Back link : pastille pastel */
       .article-shell .back-link {
         display: inline-block;
         margin-bottom: 1.6rem;
         padding: 0.3rem 0.9rem;
-        background: var(--blue);
+        background: var(--blue-soft);
         color: var(--ink);
-        border: 2px solid var(--line);
         border-radius: 999px;
         font-size: 0.9rem;
         font-weight: 600;
@@ -79,7 +76,6 @@ function renderPostPage(title, html) {
 
       .article-shell .back-link:hover {
         background: var(--yellow);
-        transform: translate(-3px, -2px) rotate(-2deg);
       }
 
       /* Titres */
@@ -138,7 +134,7 @@ function renderPostPage(title, html) {
       }
 
       .article-shell li::marker {
-        color: #e88bb4;
+        color: #FFF4FD;
       }
 
       .article-shell li + li {
@@ -153,14 +149,14 @@ function renderPostPage(title, html) {
       /* Liens : soulignement ondulé */
       .article-shell a:not(.back-link) {
         color: var(--ink);
-        text-decoration: underline wavy #6bb6e6;
+        text-decoration: underline wavy #d4f3ff;
         text-decoration-thickness: 2px;
         text-underline-offset: 4px;
         transition: background 0.15s ease;
       }
 
       .article-shell a:not(.back-link):hover {
-        background: var(--blue);
+        background: var(--blue-soft);
       }
 
       /* Citations : encadré jaune */
@@ -192,7 +188,7 @@ function renderPostPage(title, html) {
         color: #f3f0f7;
         border: 2px solid var(--line);
         border-radius: 16px;
-        box-shadow: 5px 5px 0 var(--blue);
+        box-shadow: 5px 5px 0 var(--blue-soft);
         overflow-x: auto;
         line-height: 1.6;
       }
@@ -239,7 +235,7 @@ function renderPostPage(title, html) {
       }
 
       .article-shell th {
-        background: var(--blue);
+        background: var(--blue-soft);
       }
 
       .article-shell tr:last-child td {
@@ -256,7 +252,7 @@ function renderPostPage(title, html) {
 
       .article-shell hr::after {
         content: "✿  ✿  ✿";
-        color: #e88bb4;
+        color: #FFF4FD;
         letter-spacing: 0.4em;
         font-size: 1.2rem;
       }

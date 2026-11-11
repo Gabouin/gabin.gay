@@ -106,12 +106,12 @@ body {
 }
 .instagram-link:hover {
   text-decoration-style: wavy;
-  text-decoration-color: rgb(0, 136, 255);
+  text-decoration-color: #d4f3ff;
   color: rgb(95, 95, 95);
 }
 .github-link:hover {
   text-decoration-style: wavy;
-  text-decoration-color: rgb(0, 136, 255);
+  text-decoration-color: #d4f3ff;
   color: rgb(95, 95, 95);
 }
 .badge-placeholder {
@@ -189,6 +189,10 @@ p.about {
   text-align: center;
 }
 
+.box-1, .box-2, .box-3, .box-4 {
+  box-shadow: 0 10px 20px rgba(198, 198, 198, 0.431);
+}
+
 .box-1 { grid-area: box-1; }
 .box-2 { grid-area: box-2; }
 .box-3 { grid-area: box-3; }
@@ -199,10 +203,10 @@ p.about {
   position: relative;
   overflow: hidden;
 }
-.box-1 { border: 4px solid rgb(255, 243, 198); }
-.box-2 { border: 4px solid rgb(220, 244, 255); }
-.box-3 { border: 4px solid rgb(252, 228, 236); }
-.box-4 { border: 4px solid rgb(232, 255, 239); }
+.box-1 { border: 4px solid #FEF7C5; }
+.box-2 { border: 4px solid #ffe7d4; }
+.box-3 { border: 4px solid #ffeefc; }
+.box-4 { border: 4px solid #d4f3ff; }
 .box-image {
   position: absolute;
   inset: 0;
@@ -474,8 +478,8 @@ a.box:active {
   color: rgb(95, 95, 95);
   font-size: 1.05em;
 }
-.contact-mail { border: 4px solid rgba(255, 200, 0, 0.32); }
-.contact-github { border: 4px solid rgba(251, 203, 246, 0.476); }
+.contact-mail { border: 4px solid #FEF7C5; }
+.contact-github { border: 4px solid #FFF4FD; }
 .contact-slack { border: 4px solid rgba(196, 255, 251, 0.652); }
 .newsletter-form {
   grid-column: 2;
@@ -507,12 +511,12 @@ a.box:active {
   padding: 0.4em 1.3em;
   border-radius: 25px;
   border: 2px solid;
-  border-color: rgb(164, 226, 255);
-  background-color: rgb(164, 226, 255);
+  border-color: #d4f3ff;
+  background-color: #d4f3ff;
 }
 .newsletter-form input[type="submit"]:hover {
-  background-color: rgb(107, 200, 244);
-  border-color: rgb(107, 200, 244);
+  background-color: #d4f3ff;
+  border-color: #d4f3ff;
   transition: background-color 0.3s;
   transition: border-color 0.3s;
 }
@@ -581,82 +585,82 @@ footer {
 }
 
 .pixl-link {
-  text-decoration-color: rgb(255, 189, 135); 
+  text-decoration-color: #FFCB8F; 
   text-decoration-style: dashed;
   color: rgb(95, 95, 95);
 }
 
 .pixl-link:hover {
-  text-decoration-color: rgb(255, 189, 135); 
+  text-decoration-color: #FFCB8F; 
   text-decoration-style: solid;
-  color: rgb(255, 189, 135);
+  color: #FFCB8F;
 }
 
 .sd-link {
-  text-decoration-color: rgb(252, 204, 255); 
+  text-decoration-color: #FFF4FD; 
   text-decoration-style: wavy;
   color: rgb(95, 95, 95);
 }
 
 .sd-link:hover {
-  text-decoration-color: rgb(252, 204, 255); 
+  text-decoration-color: #FFF4FD; 
   text-decoration-style: solid;
-  color: rgb(252, 204, 255); 
+  color: #FFF4FD; 
 }
 
 .jame-link {
-  text-decoration-color: rgb(162, 207, 225); 
+  text-decoration-color: #d4f3ff; 
   text-decoration-style: dotted;
   color: rgb(95, 95, 95);
 }
 
 .jame-link:hover {
-  text-decoration-color: rgb(162, 207, 225); 
+  text-decoration-color: #d4f3ff; 
   text-decoration-style: solid;
-  color: rgb(162, 207, 225); 
+  color: #d4f3ff; 
 }
 
 .macondo-link {
-  text-decoration-color: rgb(255, 200, 0); 
+  text-decoration-color: #FEF7C5; 
   text-decoration-style: solid;
   color: rgb(95, 95, 95);
 }
 
 .macondo-link:hover {
-  text-decoration-color: rgb(255, 200, 0); 
+  text-decoration-color: #FEF7C5; 
   text-decoration-style: solid;
-  color: rgb(255, 200, 0); 
+  color: #FEF7C5; 
 }
 
 .projects-link { 
-  text-decoration-color: rgb(129, 215, 255); 
+  text-decoration-color: #b0e9ff; 
   text-decoration-style: wavy;
   color: rgb(95, 95, 95);
 }
 .hc-link { 
-  text-decoration-color: rgb(255, 180, 120); 
+  text-decoration-color: #FFCB8F; 
   text-decoration-style: double;
   color: rgb(95, 95, 95);
 }
 .photos-link { 
-  text-decoration-color: rgb(250, 164, 255); 
+  text-decoration-color: #ffcbf6; 
   text-decoration-style: dashed;
   color: rgb(95, 95, 95);
 }
 .photos-link:hover { 
-  text-decoration-color: rgb(250, 175, 255); 
+  text-decoration-color: #ffcbf6; 
   text-decoration-style: solid;
-  color: rgb(250, 175, 255); 
+  color: #ffcbf6; 
 }
 .hc-link:hover { 
-  text-decoration-color: rgb(255, 180, 120); 
+  text-decoration-color: #FFCB8F; 
   text-decoration-style: solid;
-  color: rgb(255, 180, 120); 
+  color: #FFCB8F; 
 }
 .projects-link:hover { 
-  text-decoration-color: rgb(164, 226, 255); 
+  text-decoration-color: #b0e9ff; 
   text-decoration-style: solid;
-  color: rgb(129, 215, 255); 
+  color: #b0e9ff; 
 }
 .blog-page {
   min-height: calc(100vh - 16px);
@@ -804,7 +808,7 @@ body.blog-page {
 
 #page-link:hover {
   text-decoration: underline wavy;
-  text-decoration-color: rgb(137, 216, 252);
+  text-decoration-color: #d4f3ff;
   text-decoration-thickness: 2px;
   text-underline-offset: 3px;
 }
@@ -824,11 +828,11 @@ body.blog-page {
 
 
 #demo-link {
-  background-color: rgb(255, 249, 194);
+  background-color: #FEF7C5;
 }
 
 #repo-link {
-  background: rgb(203, 239, 255);
+  background: #d4f3ff;
 }
 
 #demo-link:hover {
@@ -948,7 +952,7 @@ body.blog-page {
 
 .commit-info a:hover {
   text-decoration: underline;
-  color: #77b3cc
+  color: #d4f3ff
 }
 
 .toggle-no-flower {
@@ -1044,8 +1048,8 @@ body.images-hidden .flower {
   transition: transform 0.4s ease;
 }
 
-.small-demo { background: rgb(255, 249, 194); }
-.small-repo { background: rgb(203, 239, 255); }
+.small-demo { background: #FEF7C5; }
+.small-repo { background: #d4f3ff; }
 
 .small-demo:hover,
 .small-repo:hover {
