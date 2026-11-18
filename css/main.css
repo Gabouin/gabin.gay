@@ -247,15 +247,71 @@ p.about {
 .box-3.is-active .box-label {
   opacity: 1;
 }
+
+/* box-1: at rest a single Hack Club flag (attached to the top wall) fills the box.
+   On hover it shrinks and three more flags slide in from the other walls, so the
+   four arms surround the label. The right and bottom ones are rotated 180deg. */
+.box-1 .flag-wrap {
+  position: absolute;
+  width: 46%;
+  scale: 1.9;
+  transition: scale 0.9s ease-in-out, translate 0.9s ease-in-out, opacity 0.9s ease-in-out;
+}
+.box-1 .flag-wrap img {
+  display: block;
+  width: 100%;
+  height: auto;
+  user-select: none;
+  -webkit-user-drag: none;
+}
+.box-1 .flag-wrap .flip { transform: rotate(180deg); }
+.box-1 .fw-top    { top: 0;    left: 50%; translate: -50% 0;  transform-origin: center top; }
+.box-1 .fw-left,
+.box-1 .fw-right,
+.box-1 .fw-bottom { scale: 0.65; opacity: 0; }
+.box-1 .fw-left   { left: 0;   top: 50%;  translate: -130% -50%; transform-origin: left center; }
+.box-1 .fw-right  { right: 0;  top: 50%;  translate: 130% -50%;  transform-origin: right center; }
+.box-1 .fw-bottom { bottom: 0; left: 50%; translate: -50% 130%;  transform-origin: center bottom; }
+.box-1 .box-label {
+  transform: none;
+  opacity: 0;
+  font-size: 1.3em;
+}
+.box-1:hover .fw-top,
+.box-1.is-active .fw-top,
+.box-1:focus-visible .fw-top {
+  scale: 0.65;
+}
+.box-1:hover .fw-left,
+.box-1.is-active .fw-left,
+.box-1:focus-visible .fw-left,
+.box-1:hover .fw-right,
+.box-1.is-active .fw-right,
+.box-1:focus-visible .fw-right {
+  translate: 0 -50%;
+  opacity: 1;
+}
+.box-1:hover .fw-bottom,
+.box-1.is-active .fw-bottom,
+.box-1:focus-visible .fw-bottom {
+  translate: -50% 0;
+  opacity: 1;
+}
+.box-1:hover .box-label,
+.box-1.is-active .box-label,
+.box-1:focus-visible .box-label {
+  opacity: 1;
+}
 .box-label {
   position: absolute;
   inset: 0;
   display: flex;
   align-items: center;
   justify-content: center;
-  transform: translateY(-3em);
+  transform: translateY(-2em);
   transition: opacity 0.9s ease;
   font-weight: bold;
+  font-size: 1.3em;
 }
 
 a.box,
@@ -1171,8 +1227,22 @@ body.images-hidden .flower {
   }
 
   .box-3 .box-label,
-  .box-4 .box-label {
+  .box-4 .box-label,
+  .box-1 .box-label {
     opacity: 1;
+  }
+
+  .box-1 .flag-wrap {
+    scale: 0.5;
+  }
+
+  .box-1 .fw-bottom {
+    translate: -50% 0;
+    opacity: 1;
+  }
+
+  .box-label {
+    font-size: 1.05em;
   }
 
   .articles { width: 90%; margin: 0 auto; }
