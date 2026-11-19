@@ -43,7 +43,7 @@ function renderProject(p) {
         hackatime.style.display = '';
         hackatime.textContent = "Loading...";
         loadHackatime(p.hackatime)
-            .then(t => hackatime.textContent = `${t} on Hackatime`)
+            .then(t => hackatime.textContent = `Designed in ${t}`)
             .catch(() => hackatime.style.display = 'none');
     } else {
         hackatime.style.display = 'none';
@@ -125,7 +125,7 @@ smallProjects.forEach(p => {
         time.style.display = '';
         time.textContent = "Loading...";
         loadHackatime(p.hackatime)
-            .then(t => time.textContent = `${t} on Hackatime`)
+            .then(t => time.textContent = `Designed in  ${t}`)
             .catch(() => time.style.display = 'none');
     }
 

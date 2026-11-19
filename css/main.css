@@ -1484,3 +1484,9 @@ body.images-hidden .flower {
     text-align: center;
   }
 }
+
+@media (max-width: 768px) {
+  .photo img { will-change: auto; }
+  .photo:hover img,
+  .photo:focus-within img { transform: none; }
+}
