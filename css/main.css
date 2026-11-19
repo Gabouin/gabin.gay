@@ -1241,7 +1241,8 @@ body.images-hidden .flower {
     opacity: 1;
   }
 
-  .box-label {
+  .box-label,
+  .box-1 .box-label {
     font-size: 1.05em;
   }
 
