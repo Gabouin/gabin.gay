@@ -58,6 +58,22 @@ function updateNavState() {
     nextBtn.disabled = false;
 }
 
+const imageCache = new Map();
+
+// Resolves once the image is in the browser cache (or has failed, so we never hang).
+function preloadImage(src) {
+    if (!imageCache.has(src)) {
+        imageCache.set(src, new Promise(resolve => {
+            const im = new Image();
+            im.onload = im.onerror = () => resolve();
+            im.src = src;
+        }));
+    }
+    return imageCache.get(src);
+}
+
+let showToken = 0;
+
 function showProject(index) {
     const animating = typeof isCardAnimating !== 'undefined' && isCardAnimating;
     if (animating) return;
@@ -65,15 +81,20 @@ function showProject(index) {
     const previousIndex = current;
     const targetIndex = (index + projects.length) % projects.length;
     const direction = targetIndex - previousIndex;
+    const p = projects[targetIndex];
+    const token = ++showToken;
 
-    current = targetIndex;
-    const p = projects[current];
     prevBtn.disabled = true;
     nextBtn.disabled = true;
-    swapCard(() => {
-        renderProject(p);
-        updateNavState();
-    }, direction);
+
+    preloadImage(p.image).then(() => {
+        if (token !== showToken) return;
+        current = targetIndex;
+        swapCard(() => {
+            renderProject(p);
+            updateNavState();
+        }, direction);
+    });
 }
 
 prevBtn.addEventListener('click', () => showProject(current - 1));
@@ -106,6 +127,12 @@ async function loadHackatime(names) {
 }
 
 renderProject(projects[current]);
+
+// Warm the cache for the other projects once the page has loaded (heaviest last).
+window.addEventListener('load', () => {
+    projects.slice().sort((a, b) => (a.image.endsWith('.gif') ? 1 : 0) - (b.image.endsWith('.gif') ? 1 : 0))
+        .forEach(p => preloadImage(p.image));
+});
 
 
 smallProjects.forEach(p => {
