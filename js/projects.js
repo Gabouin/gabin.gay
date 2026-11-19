@@ -60,7 +60,6 @@ function updateNavState() {
 
 const imageCache = new Map();
 
-// Resolves once the image is in the browser cache (or has failed, so we never hang).
 function preloadImage(src) {
     if (!imageCache.has(src)) {
         imageCache.set(src, new Promise(resolve => {
