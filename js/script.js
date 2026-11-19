@@ -29,6 +29,18 @@ window.addEventListener('load', () => {
     };
   });
 
+  // Lazy-loaded images make the page taller after load; the flowers' %-based
+  // positions were frozen against the short page, so rescale them as it grows.
+  let prevH = document.documentElement.scrollHeight;
+  new ResizeObserver(() => {
+    const newH = document.documentElement.scrollHeight;
+    if (newH > prevH && prevH > 0) {
+      const k = newH / prevH;
+      for (const f of flowers) if (!f.dragging) f.y *= k;
+    }
+    prevH = newH;
+  }).observe(document.body);
+
   let last = performance.now();
 
   function tick(now) {
