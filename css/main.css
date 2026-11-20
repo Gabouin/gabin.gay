@@ -204,7 +204,7 @@ p.about {
   overflow: hidden;
 }
 .box-1 { border: 4px solid #FEF7C5; }
-.box-2 { border: 4px solid #ffe7d4; }
+.box-2 { border: none; box-shadow: none; border-radius: 0; overflow: visible; } /* don't clip the halves when they move */
 .box-3 { border: 4px solid #ffeefc; }
 .box-4 { border: 4px solid #d4f3ff; }
 .box-image {
@@ -248,9 +248,6 @@ p.about {
   opacity: 1;
 }
 
-/* box-1: at rest a single Hack Club flag (attached to the top wall) fills the box.
-   On hover it shrinks and three more flags slide in from the other walls, so the
-   four arms surround the label. The right and bottom ones are rotated 180deg. */
 .box-1 .flag-wrap {
   position: absolute;
   width: 46%;
@@ -302,6 +299,55 @@ p.about {
 .box-1:focus-visible .box-label {
   opacity: 1;
 }
+
+.box-2 { background: transparent; }
+.box-2 .box-label {
+  transform: none;
+  opacity: 0;
+  font-size: 1.3em;
+  z-index: 0;
+}
+.paper {
+  position: absolute;
+  inset: 0;
+  z-index: 1;
+  transition: transform 0.7s cubic-bezier(.3,.7,.2,1);
+}
+.paper {
+  background: url(../images/illustrations/newspaper.png) center / 100% 100% no-repeat #fff;
+}
+
+.paper::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: url(../images/illustrations/newspaper-torn.png) center / 100% 100% no-repeat;
+  opacity: 0;
+  transition: opacity 0.3s ease;
+}
+.box-2:hover .paper::after,
+.box-2:focus-visible .paper::after { opacity: 1; }
+.paper-left {
+  clip-path: polygon(0 0, 100% 0, 100% 51.5%, 93.5% 51.2%, 91.8% 52.0%, 90.0% 51.0%, 88.2% 50.0%, 86.5% 49.0%, 84.7% 48.0%, 82.9% 47.4%, 81.2% 47.1%, 79.4% 47.9%, 77.6% 49.6%, 75.9% 51.3%, 74.1% 51.8%, 72.4% 50.6%, 70.6% 49.3%, 68.8% 48.1%, 67.1% 47.3%, 65.3% 47.3%, 63.5% 48.4%, 61.8% 49.8%, 60.0% 50.8%, 58.2% 50.9%, 56.5% 50.0%, 54.7% 49.0%, 52.9% 47.9%, 51.2% 47.1%, 49.4% 46.2%, 47.6% 45.5%, 45.9% 45.7%, 44.1% 46.9%, 42.4% 48.1%, 40.6% 49.2%, 38.8% 49.9%, 37.1% 50.2%, 35.3% 50.0%, 33.5% 49.2%, 31.8% 48.2%, 30.0% 46.8%, 28.2% 45.9%, 26.5% 47.2%, 24.7% 48.5%, 22.9% 49.0%, 21.2% 48.2%, 19.4% 47.0%, 17.6% 45.8%, 15.9% 44.9%, 14.1% 44.5%, 12.4% 45.0%, 10.6% 46.1%, 8.8% 47.1%, 7.1% 48.2%, 5.3% 47.8%, 3.5% 47.8%, 0% 47.8%);
+  transform-origin: top left;
+}
+.paper-right {
+  clip-path: polygon(0% 47.8%, 3.5% 47.8%, 5.3% 47.8%, 7.1% 48.2%, 8.8% 47.1%, 10.6% 46.1%, 12.4% 45.0%, 14.1% 44.5%, 15.9% 44.9%, 17.6% 45.8%, 19.4% 47.0%, 21.2% 48.2%, 22.9% 49.0%, 24.7% 48.5%, 26.5% 47.2%, 28.2% 45.9%, 30.0% 46.8%, 31.8% 48.2%, 33.5% 49.2%, 35.3% 50.0%, 37.1% 50.2%, 38.8% 49.9%, 40.6% 49.2%, 42.4% 48.1%, 44.1% 46.9%, 45.9% 45.7%, 47.6% 45.5%, 49.4% 46.2%, 51.2% 47.1%, 52.9% 47.9%, 54.7% 49.0%, 56.5% 50.0%, 58.2% 50.9%, 60.0% 50.8%, 61.8% 49.8%, 63.5% 48.4%, 65.3% 47.3%, 67.1% 47.3%, 68.8% 48.1%, 70.6% 49.3%, 72.4% 50.6%, 74.1% 51.8%, 75.9% 51.3%, 77.6% 49.6%, 79.4% 47.9%, 81.2% 47.1%, 82.9% 47.4%, 84.7% 48.0%, 86.5% 49.0%, 88.2% 50.0%, 90.0% 51.0%, 91.8% 52.0%, 93.5% 51.2%, 100% 51.5%, 100% 100%, 0 100%);
+  transform-origin: bottom right;
+}
+.box-2:hover .paper-left,
+.box-2:focus-visible .paper-left  { transform: translateY(-9%) rotate(-3deg); }
+.box-2:hover .paper-right,
+.box-2:focus-visible .paper-right { transform: translateY(9%) rotate(-3deg); }
+.box-2:hover .box-label,
+.box-2:focus-visible .box-label { opacity: 1; }
+@media (hover: none) {
+  .box-2 .paper-left  { transform: translateY(-9%) rotate(-3deg); }
+  .box-2 .paper-right { transform: translateY(9%) rotate(-3deg); }
+  .box-2 .box-label { opacity: 1; }
+  .box-2 .paper::after { opacity: 1; }
+}
+
 .box-label {
   position: absolute;
   inset: 0;
@@ -1242,7 +1288,8 @@ body.images-hidden .flower {
   }
 
   .box-label,
-  .box-1 .box-label {
+  .box-1 .box-label,
+  .box-2 .box-label {
     font-size: 1.05em;
   }
 
