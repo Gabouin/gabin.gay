@@ -2,7 +2,7 @@
 
 A lot of high quality Hack Club YSWS (You Ship We Ship) programs are facing a real issue in their channel: nobody talks. This shouldn't be taken lightly as message activity creates strong engagement around your program. As I've observed, a 10k users flagship program with 60% fewer messages posted in its channel than a 2k users community-orged program will have a noticeably weaker community, which is regrettable for a flagship. As we all know, Hack Club is a place for teenagers to create cool projects and make friends. That's why a strong community will make your program memorable and, in 10 years, these teens will actually talk about Hack Club as a beautiful place, thanks to YOUR program.
 
-There are a lot of things that can be done to improve the message activity in your program, and so, to improve the community. This blog article will be about me trying to classify them, thanks to my experience. 
+There are a lot of things that can be done to improve the message activity in your program, and so, to improve the community. This blog article will be about me trying to classify them, thanks to my small experience. 
 
 ## Be the change you want to see.
 
@@ -19,6 +19,6 @@ From what I've seen, they are one of the best ways to improve the quality of con
 Running a Show and Tell is actually **pretty easy** and can almost be improvised! You just need to announce it beforehand, start a huddle in your channel and just let people come and present their projects! However, if you want your show and tell to actually create engagement, I have a few tips for you that i got to learn from my past experience. 
 
 1. **Don't run a Show and Tell alone!** You'll need at least another person to help you in the background. While you're the host of the Show and Tell and get to animate it, someone has to write down the projects presented, verify if they were actually shipped to your program (it's usually a requirement in Show and Tells), look for the project's repo to link in the chat, time their presentation (if you set a limit time) and more!
-2. **
+2. **Don’t let your attendees get bored!** For most of the Show, people will be presenting their projects and answering questions about them, but there can be some idle time, for example while you’re waiting for someone to arrive before they start their presentation! When that happens, the best thing to do is keep talking about the previous project and ask the person who built it more technical questions, like how exactly they did X or Y. This lets them go more in depth about what they spent hours making, and it’s usually not boring: they’ll be passionate about it! Another cool thing you can do is simply talk about anything. Even the simplest questions can spark great conversations when you’re in a huddle with 10-20 other teens!
 
 ## Still being written 
