@@ -25,4 +25,8 @@ Running a Show and Tell is actually **pretty easy** and can almost be improvised
 
 I’m sure there’s a ton of other advice I could give you to help you run the perfect Show and Tell, but in my opinion, these 4 are some of the most important! Hit me up with a DM (@Gabin on Slack) if you need more in-depth advice or have any specific questions!
 
+## Don't let corny discussion happen in your channel! 
+
+blablablabla tralalerotralala
+
 ## Still being written 
