@@ -16,6 +16,7 @@ A cute space for me to showcase my projects, my photos, what i do in my life. Yo
 ![License](https://img.shields.io/badge/License-MIT-blue.svg)
 ![Hackatime Badge](https://hackatime-badge.hackclub.com/U0A2SJ7B739/website) +
 ![Hackatime Badge](https://hackatime-badge.hackclub.com/U0A2SJ7B739/gabintavernier.com-v2)
+[![Hack Club](https://img.shields.io/badge/hack-club-EC3750?style=flat&logo=hackclub&logoColor=white)](https://hackclub.com/)
 
 </div>
 
